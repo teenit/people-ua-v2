@@ -1,0 +1,9 @@
+.form__wrap{
+    width: 506px;
+    height: 475px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    top: 175px;
+    left: 50px;
+}
