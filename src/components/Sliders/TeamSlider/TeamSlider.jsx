@@ -50,7 +50,18 @@ const TeamSlider = () => {
     const [currentMove, setCurrentMove] = useState(0);
     const [copy, setCopy] = useState([...teamSliderData]);
     const [activeDot, setActiveDot] = useState(0);
-
+    const [sliderStyle, setSliderStyle]  = useState({
+        marginLeft: 0,
+        width:teamSliderData.length * 20 + "%"
+    });
+    const [sliderMove, setSliderMove] = useState({
+        step:20,
+        startPosition:0,
+        endPosition: teamSliderData.length - 1,
+        endScreenPosition: 4,
+        startScreenPosition: 0,
+        sliderPosition:0
+    })
     const moveData = (move) => {
         setCopy(teamSliderData.slice(move, move + 5));
     };
@@ -68,23 +79,25 @@ const TeamSlider = () => {
 
     return (
         <div className={s.slider__wrap}>
-            <h2 className={s.title}>наша команда</h2>
+            <h2 className={s.title} onClick={()=>console.log(sliderMove)}>наша команда</h2>
             <div className={s.slider__inner}>
                 <div className={s.slider}>
                     <div className={s.arrow}>
                         <img src={arrowLeft} alt="" onClick={() => {
-                                if (currentMove > 0) {
-                                    setCurrentMove((prevMove) => prevMove - 1);
-                                }
+                            if(sliderMove.startScreenPosition < 1) return;
+                                 let marginLeft = -sliderMove.step * (sliderMove.sliderPosition - 1);
+                                 setSliderMove({...sliderMove, sliderPosition:sliderMove.sliderPosition - 1, startScreenPosition:sliderMove.startScreenPosition - 1, endScreenPosition:sliderMove.endScreenPosition - 1})
+                                 setSliderStyle({...sliderStyle,marginLeft:marginLeft + "%"})
                             }}
                         />
                     </div>
-                    <div className={s.slider__content} >
-                        {copy.map((item, index) => {
+                    <div className={s.slider_content_wrap}>
+                    <div className={s.slider__content} style={sliderStyle}>
+                      {teamSliderData.map((item, index) => {
                             return (
                                 <div key={index} className={`${s.slider__card}
-                                    ${index === 0 || index === 4 ? s.scale08 : null}
-                                    ${index === 1 || index === 3 ? s.scale09 : null}
+                                    ${index - sliderMove.startScreenPosition === 0 || index - sliderMove.startScreenPosition === 4 ? s.scale08 : null}
+                                    ${index - sliderMove.startScreenPosition === 1 || index - sliderMove.startScreenPosition === 3 ? s.scale09 : null}
                                     `}
                                 >
                                     <div className={s.img__wrap}>
@@ -95,12 +108,16 @@ const TeamSlider = () => {
                                 </div>
                             );
                         })}
+
                     </div>
+                    </div>
+                   
                     <div className={s.arrow}>
                         <img src={arrowRight} alt="" onClick={() => {
-                                if (currentMove < teamSliderData.length - 5) {
-                                    setCurrentMove((prevMove) => prevMove + 1);
-                                }
+                                let marginLeft = -sliderMove.step * (sliderMove.sliderPosition + 1);
+                                if (sliderMove.endScreenPosition + 1 > sliderMove.endPosition) return;
+                                setSliderMove({...sliderMove, sliderPosition:sliderMove.sliderPosition + 1, startScreenPosition:sliderMove.startScreenPosition + 1, endScreenPosition:sliderMove.endScreenPosition + 1})
+                                setSliderStyle({...sliderStyle,marginLeft:marginLeft + "%"})
                             }}
                         />
                     </div>
