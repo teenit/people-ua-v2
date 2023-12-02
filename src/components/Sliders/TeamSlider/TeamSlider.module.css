@@ -1,82 +1,89 @@
-.wrap{
-    position: relative;
-}
-.inner{
-    width: 75%;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 20px;
-}
-.slider{
-    display: grid;
-    width: 100%;
-    transition: all .3s;
-}
-.slide__dop{
-    background-color: aliceblue;
-}
-.arrows{
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-.arrow__left{
-    left: 10%;
-    transform: translate(-120%, -50%);
-    background: url("../../../img/slider-arrow-left.svg") no-repeat;
-    background-size: 75%;
-    background-position: center;
-}
-.arrow__right{
-    right: 10%;
-    transform: translate(+120%, -50%);
-    background: url("../../../img/slider-arrow-right.svg") no-repeat;
-    background-size: 75%;
-    background-position: center;
-}
-.slide{
-    padding: 10px;
-    transition: all .3s;
-}
-.slide__item{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.title {
+    text-transform: uppercase;
+    font-weight: normal;
     text-align: center;
 }
-.item__img{
-    overflow: hidden;
-}
-.img{
+
+.slider__wrap {
     width: 100%;
-    border-radius: 50%;
-}
-.item__name h3{
-    font-weight: var(--bold-text);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.small{
-    background-color: aquamarine;
+.slider__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
-.mid{
-    background-color: bisque;
+
+.slider__dots {
+    display: flex;
+    gap: 5px;
 }
-.smaller{
-    transform: scale(.8);
+
+.slider {
+    display: flex;
+    gap: 50px;
+    overflow-x: hidden;
 }
-.middle{
-    transform: scale(.9);
+
+.slider__content {
+    width: 140%;
+    height: max-content;
+    display: flex;
+    gap: 10px;
 }
-@media (max-width: 500px){
-    .wrap{
-        width: 90%;
-        margin: auto;
-    }
-    .arrows{
-        width: 30px;
-        height: 30px;
-    }
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #5a5fc5;
+    cursor: pointer;
 }
+.dot:hover{
+    transform: scale(1.25);
+    transition: all .3s;
+}
+.dot__active{
+    background-color: var(--blue);
+}
+.slider__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slider__card p {
+    margin: 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img__wrap img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+.scale08 {
+    transform: scale(0.8);
+}
+
+.scale09 {
+    transform: scale(0.9);
+}
+

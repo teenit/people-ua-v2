@@ -3,6 +3,7 @@ import s from './Header.module.css'
 import logo from '../../img/logo.svg'
 import phone from '../../img/phone.svg'
 import Lang from './Lang'
+import BurgerMenu from '../BurgerMenu/BurgerMenu'
 
 const Header = () => {
   return (
@@ -13,14 +14,15 @@ const Header = () => {
           </div>
         <div className={s.header__panel}>
           <Lang/>
-          <button className={s.header__phone__button}>
+          <div className={s.header__phone__button}>
             <div className={s.header__icon__wrap}>
                <img src={phone} alt="" />
             </div>
            
             <span>+380932080760</span>
-          </button>
+          </div>
           <button className={s.header__support__button}>підтримати</button>
+          <BurgerMenu/>
         </div>
       </div>
     </header>

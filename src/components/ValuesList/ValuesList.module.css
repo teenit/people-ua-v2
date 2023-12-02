@@ -1,0 +1,44 @@
+.values__wrap{
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.values__inner{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+.values__list{
+    border-radius: var(--card-border-radius);
+    border: solid 2px var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 60px;
+}
+.img__wrap img{
+    width: 100%;
+}
+.values__list p{
+    font-size: 24px;
+    font-family: 'Kyiv Region';
+    margin: 0;
+}
+.title {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+@media screen and (max-width:1000px){
+    .values__inner{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+    .img__wrap img{
+        width: 100%;
+    }
+}

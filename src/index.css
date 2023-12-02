@@ -22,16 +22,15 @@ code {
   --blue:#30358C;
   --picture-border-radius:10px;
   --card-border-radius:10px;
-  --button-border-radius:5px;
+  --button-border-radius:10px;
 }
 p,span,h3{
   font-family: 'Latoweb';
 }
 button{
   cursor: pointer;
+  font-family: 'Kyiv Region';
+  font-size: 18px;
 }
-button:hover{
-  transition: all .3s;
-  transform: scale(1.05);
-}
+
 

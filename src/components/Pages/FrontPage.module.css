@@ -6,7 +6,7 @@
 }
 
 .inner {
-    width: 75%;
+    width: 80%;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -15,6 +15,7 @@
 
 .title {
     text-transform: uppercase;
+    font-weight: normal;
 }
 
 .yellow__button {
@@ -26,7 +27,7 @@
     color: var(--blue);
     text-transform: uppercase;
     height: 50px;
-    font-family: 'Kyiv Region';
+    font-family: 'Kyiv Region'
 }
 
 .first__screen__wrap {
@@ -60,6 +61,10 @@
 }
 
 
+
+
+
+
 .vision__wrap {
     display: flex;
     flex-direction: column;
@@ -84,13 +89,21 @@
     width: 50%;
     margin: auto;
 }
-
+.vision__card__content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 75%;
+}
 .vision__card:hover {
     cursor: pointer;
     transition: all .3s;
-    transform: scale(1.025);
 }
+/* .vision__card:focus{
+    transform-style: preserve-3d;
+    transform: rotate(180deg);
 
+} */
 .vision__card__desc {
     border: solid 2px var(--yellow);
 }
@@ -98,7 +111,7 @@
 .vision__card__info {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     text-transform: uppercase;
 }
 
@@ -136,7 +149,6 @@
 
 .directions__card__img {
     border-radius: var(--picture-border-radius);
-    background-color: gray;
 }
 
 .directions__card__info {
@@ -145,24 +157,35 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    gap: 24px;
+    padding: 12px;
 }
-.directions__card__info >h3{
+.directions__card__info h3, .directions__card__info p{
     margin: 0;
 }
 .directions__card__panel {
     width: 100%;
+    height: max-content;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
 }
-
+.directions__card__panel p{
+    max-width: 75%;
+}
+.directions__card__img img{
+    width: 100%;
+}
 .directions__card__button {
     border-radius: var(--button-border-radius);
     background-color: var(--blue);
     border: none;
     width: 40px;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .more__about__button {
@@ -205,7 +228,6 @@
 
 .about__us__img__wrap img {
     max-width: 100%;
-    height: 100%;
 }
 
 .about__us__info>h2,
@@ -226,6 +248,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 }
 
 .our__pictures__grid {
@@ -238,6 +261,37 @@
 
 .our__pictures__grid__picture__wrap {
     border-radius: var(--picture-border-radius);
-    background-color: gray;
-    height: 250px;
+}
+.our__pictures__grid__picture__wrap img{
+    width: 100%;
+}
+
+
+@media screen and (max-width:1000px){
+    .directions__cards__wrap{
+        grid-template-columns: none;
+        grid-template-rows: repeat(5,1fr);
+    }
+    .about__us__wrap{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        gap: 40px;
+        height: max-content;
+    }
+    .about__us__wrap .yellow__button{
+        margin: 0px auto;
+    }
+    .about__us__info{
+        gap: 25px;
+    }
+    .our__pictures__grid{
+        grid-template-columns: none;
+        grid-template-rows: repeat(9,1fr);
+    }
+    .vision__card__split{
+        flex-direction: column;
+    }
+    .vision__card{
+        width: 100%;
+    }
 }

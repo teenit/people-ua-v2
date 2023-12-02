@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import s from "./TeamSlider.module.css";
-import img1 from '../../../img/teamSlider/img1.png'
-import img2 from '../../../img/teamSlider/img2.png'
-import img3 from '../../../img/teamSlider/img3.png'
-import img4 from '../../../img/teamSlider/img4.png'
-import img5 from '../../../img/teamSlider/img5.png'
-const TeamSlider = ({}) =>{
+import arrowLeft from '../../../img/slider-arrow-left.svg';
+import arrowRight from '../../../img/slider-arrow-right.svg';
+import img1 from '../../../img/teamSlider/img1.png';
+import img2 from '../../../img/teamSlider/img2.png';
+import img3 from '../../../img/teamSlider/img3.png';
+import img4 from '../../../img/teamSlider/img4.png';
+import img5 from '../../../img/teamSlider/img5.png';
+
+const TeamSlider = () => {
     const teamSliderData = [
         {
             imgUrl: img1,
@@ -31,98 +34,90 @@ const TeamSlider = ({}) =>{
             imgUrl: img5,
             name: 'our team name5',
             status: 'our team role5'
-        }
-    ]
-    const[slider, setSlider] = useState({
-        sliderPosition: 0,
-        slideNow: 0,
-        step: 20,
-        percent: 20,
-        marginLeft: 0,
-        amountOnPage: 0
-    })
-    
-    const [isOneSlide, setIsOneSlide] = useState(false);
-    useEffect(()=>{
-        if(window.innerWidth < 500){
-            setOneSlide()
-        }
-        else{
-            setTwoSlides()
-        }
+        },
+        {
+            imgUrl: img5,
+            name: 'our team name6',
+            status: 'our team role6'
+        },
+        {
+            imgUrl: img5,
+            name: 'our team name7',
+            status: 'our team role7'
+        },
+    ];
 
-    }, [])
-    window.addEventListener("resize", (event) => {
-        if(window.innerWidth < 500){
-            if (!isOneSlide) {
-                setOneSlide()
-            }
+    const [currentMove, setCurrentMove] = useState(0);
+    const [copy, setCopy] = useState([...teamSliderData]);
+    const [activeDot, setActiveDot] = useState(0);
+
+    const moveData = (move) => {
+        setCopy(teamSliderData.slice(move, move + 5));
+    };
+
+    useEffect(() => {
+        moveData(currentMove);
+    }, [currentMove]);
+
+    useEffect(() => {
+        const dotsLength = Math.ceil(teamSliderData.length / 5);
+        if (activeDot === dotsLength - 1 && teamSliderData.length % 5 !== 0) {
+            setCurrentMove(teamSliderData.length - 5);
         }
-        else{
-            if (isOneSlide) {
-                setTwoSlides()
-            }
-        }
-    });
+    }, [activeDot, teamSliderData]);
 
-    function setTwoSlides() {
-        setSlider({...slider, amountOnPage: 5,  step: 20, percent: 20})
-        setIsOneSlide(false)
-    }
-
-    function setOneSlide() {
-        setSlider({...slider, amountOnPage: 1, step: 100, percent: 100})
-        setIsOneSlide(true)
-    }
-
-    return(
-        <div className={s.wrap}>
-            <div className={`${s.arrows} ${s.arrow__left}`} onClick={()=>{
-                let go = slider.sliderPosition + slider.step;
-                if(go > 0) return;
-                let slN = slider.slideNow - 1;
-                if(slN % 5 == 0) setSlider({...slider, sliderPosition: go, slideNow:slN})
-                else setSlider({...slider, sliderPosition: go, slideNow:slN})
-
-            }}></div>
-            <div className={s.inner}>
-                <div className={`${s.slider}`} style={{
-                    gridTemplateColumns: `repeat(${teamSliderData.length}, ${slider.percent}%)`,
-                    marginLeft: `${slider.sliderPosition}%`
-                }}>
-                    {
-                        teamSliderData.map((item, index)=>{
-                            return(
-                                <div className={`${s.slide} ${index == slider.slideNow || index == slider.slideNow + 4 ? s.smaller :null} ${index == slider.slideNow + 1 || index == slider.slideNow + 3 ? s.middle :null}`} key={index}>
-                                    <div className={s.slide__in}>
-                                        <div className={s.slide__item}>
-                                            <div className={s.item__img}>
-                                                <img className={s.img} src={item.imgUrl} alt={item.status}/>
-                                            </div>
-                                            <div className={s.item__name}>
-                                                <h3 className={s.tittle}>{item.name}</h3>
-                                            </div>
-                                            <div className={s.item__status}>
-                                                <p className={s.text}>{item.status}</p>
-                                            </div>
-                                        </div>
+    return (
+        <div className={s.slider__wrap}>
+            <h2 className={s.title}>наша команда</h2>
+            <div className={s.slider__inner}>
+                <div className={s.slider}>
+                    <div className={s.arrow}>
+                        <img src={arrowLeft} alt="" onClick={() => {
+                                if (currentMove > 0) {
+                                    setCurrentMove((prevMove) => prevMove - 1);
+                                }
+                            }}
+                        />
+                    </div>
+                    <div className={s.slider__content} >
+                        {copy.map((item, index) => {
+                            return (
+                                <div key={index} className={`${s.slider__card}
+                                    ${index === 0 || index === 4 ? s.scale08 : null}
+                                    ${index === 1 || index === 3 ? s.scale09 : null}
+                                    `}
+                                >
+                                    <div className={s.img__wrap}>
+                                        <img src={item.imgUrl} alt="" />
                                     </div>
+                                    <p className={s.bold}>{item.name}</p>
+                                    <p>{item.status}</p>
                                 </div>
-                            )
-                        })
-                    }
+                            );
+                        })}
+                    </div>
+                    <div className={s.arrow}>
+                        <img src={arrowRight} alt="" onClick={() => {
+                                if (currentMove < teamSliderData.length - 5) {
+                                    setCurrentMove((prevMove) => prevMove + 1);
+                                }
+                            }}
+                        />
+                    </div>
+                </div>
 
+                <div className={s.slider__dots}>
+                    {Array.from({ length: Math.ceil(teamSliderData.length / 5) }).map((item, index) => (
+                        <div className={`${s.dot} ${index === activeDot ? s.dot__active : null}`} key={index} onClick={() => {
+                                setActiveDot(index);
+                                setCurrentMove(index * 5);
+                            }}
+                        ></div>
+                    ))}
                 </div>
             </div>
-            <div className={`${s.arrows} ${s.arrow__right}`} onClick={()=>{
-                let go = slider.sliderPosition - slider.step;
-                console.log(go);
-                if(go < -(teamSliderData.length * slider.percent) + 100) return;
-                let slN = slider.slideNow + 1;
-                if(slN % 5 == 0) setSlider({...slider, sliderPosition: go, slideNow:slN})
-                else setSlider({...slider, sliderPosition: go, slideNow:slN})
-            }}></div>
         </div>
-    )   
-}
+    );
+};
+
 export default TeamSlider;

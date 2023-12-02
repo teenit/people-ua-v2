@@ -6,4 +6,10 @@
     position: relative;
     top: 175px;
     left: 50px;
+    background-color: #fff;
+}
+@media screen and (max-width:1000px){
+    .form__wrap{
+        background:none;
+    }
 }

@@ -1,0 +1,88 @@
+.burger__wrap{
+    width: 21px;
+    height: 21px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+}
+.line{
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 10px;
+    transition: all .3s;
+
+}
+.line:nth-child(-n+1){
+    width: 75%;
+}
+.line:nth-child(even){
+    width: 40%;
+}
+.l3{
+    transform: rotate(45deg);
+    position: relative;
+    bottom: 9px;
+    transition: all .3s;
+
+}
+.l1{
+    width: 100% !important;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 9px;
+    transition: all .3s;
+}
+.l2{
+    display: none;
+}
+
+.modal__inner{
+    width: 100%;
+    height: max-content;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+.modal__inner p{
+    margin: 0;
+}
+.modal{
+    width: 100% !important;
+    transform: rotate(45deg);
+    position: relative;
+    bottom: 9px;
+}
+.header__phone__button {
+    width: max-content;
+    border-radius: var(--button-border-radius);
+    border: solid 1px var(--blue);
+    color: var(--blue);
+    background: none;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header__phone__button span{
+    font-family: 'Kyiv Region';
+    max-height: 18px;
+}
+.header__icon__wrap{
+    max-width: 24px;
+    max-height: 24px;
+}
+.header__support__button {
+    border-radius: var(--button-border-radius);
+    background-color: var(--yellow);
+    padding: 17px 22px;
+    border: none;
+    color: var(--blue);
+    text-transform: uppercase;
+    width: max-content;
+}
