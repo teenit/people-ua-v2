@@ -92,7 +92,7 @@ const FrontPage = () => {
             <div className={s.first__screen__info__wrap}>
               <div className={s.first__screen__info__inner}>
                 <p style={{ fontSize: "24px", fontFamily: "Kyiv Region" }}>ГО ЛЮДИ UA, місто Київ</p>
-                <p style={{ fontSize: "40px", fontFamily: "Kyiv Region" }}>Закладаємо фундамент нового українського суспільства</p>
+                <p className={s.big__size}>Закладаємо фундамент нового українського суспільства</p>
                 <p>Системний, комплексний та індивідуальний підхід до допомоги, підтримки та розвитку сімей, дітей та молоді</p>
               </div>
             </div>

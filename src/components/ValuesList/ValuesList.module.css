@@ -21,8 +21,12 @@
     text-align: left;
     padding: 60px;
 }
+.img__wrap{
+    height: max-content;
+}
 .img__wrap img{
     width: 100%;
+
 }
 .values__list p{
     font-size: 24px;
@@ -40,5 +44,13 @@
     }
     .img__wrap img{
         width: 100%;
+    }
+}
+@media screen and (max-width:500px){
+    .values__list{
+        padding: 30px;
+    }
+    .values__inner{
+        grid-template-rows: 0.5fr 1fr;
     }
 }

@@ -91,4 +91,8 @@ width: 100%;
 .scale09 {
     transform: scale(0.9);
 }
-
+@media screen and (max-width:600px){
+    .slider__card{
+        transform: scale(0.8);
+    }
+}

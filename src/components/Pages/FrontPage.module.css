@@ -59,7 +59,10 @@
     display: flex;
     flex-direction: column;
 }
-
+.big__size{
+    font-size: 40px;
+    font-family: 'Kyiv Region';
+}
 
 
 
@@ -99,11 +102,6 @@
     cursor: pointer;
     transition: all .3s;
 }
-/* .vision__card:focus{
-    transform-style: preserve-3d;
-    transform: rotate(180deg);
-
-} */
 .vision__card__desc {
     border: solid 2px var(--yellow);
 }
@@ -124,7 +122,10 @@
     align-items: center;
     flex-direction: column;
 }
-
+.vision__img__wrap img{
+    max-width: 75px;
+    max-height: 75px;
+}
 
 
 
@@ -141,14 +142,17 @@
 }
 
 .directions__card__wrap {
+    height: max-content;
     width: 100%;
-    display: grid;
-    grid-template-rows: 2fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     gap: 15px;
 }
 
 .directions__card__img {
     border-radius: var(--picture-border-radius);
+    height: max-content;
 }
 
 .directions__card__info {
@@ -224,8 +228,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
 
+}
+.about__us__img__wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .about__us__img__wrap img {
     max-width: 100%;
 }
@@ -266,15 +276,33 @@
     width: 100%;
 }
 
-
+@media screen and (max-width:1200px){
+.about__us__info{
+    gap: 15px;
+    height: max-content;
+}
+}
+@media screen and (max-width:600px){
+.big__size{
+    font-size: 30px;
+}
+.our__pictures__grid{
+    grid-template-columns: none;
+    grid-template-rows: repeat(9,1fr);
+}
+.directions__cards__wrap{
+    grid-template-columns: none;
+    grid-template-rows: repeat(5,1fr);
+}
+}
 @media screen and (max-width:1000px){
-    .directions__cards__wrap{
-        grid-template-columns: none;
-        grid-template-rows: repeat(5,1fr);
+
+    .directions__card__wrap{
+        grid-template-rows: 1fr 1fr;
     }
     .about__us__wrap{
         grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 0.75fr 0.5fr;
         gap: 40px;
         height: max-content;
     }
@@ -284,14 +312,11 @@
     .about__us__info{
         gap: 25px;
     }
-    .our__pictures__grid{
-        grid-template-columns: none;
-        grid-template-rows: repeat(9,1fr);
-    }
+
     .vision__card__split{
         flex-direction: column;
     }
     .vision__card{
-        width: 100%;
+        height: max-content;
     }
 }
