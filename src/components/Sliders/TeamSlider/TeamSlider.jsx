@@ -62,11 +62,7 @@ const TeamSlider = () => {
         startScreenPosition: 0,
         sliderPosition: 0
     });
-
-    const calculateActiveDot = () => {
-        const activeDotIndex = Math.floor(sliderMove.sliderPosition / 5);
-        setActiveDot(activeDotIndex);
-    };
+    const [cardsPerSlide, setCardsPerSlide] = useState()
 
     useEffect(() => {
         const changeResize = () => {
@@ -76,19 +72,24 @@ const TeamSlider = () => {
             let newSlideStepResult;
             if (newScreenWidth <= 1300 && newScreenWidth >= 1050) {
                 newSlideStepResult = 25;
-                setSliderMove({...sliderMove,endScreenPosition:3});
+                setSliderMove({ ...sliderMove, endScreenPosition: 3 });
+                setCardsPerSlide(4)
             } else if (newScreenWidth <= 1050 && newScreenWidth >= 800) {
                 newSlideStepResult = 33.3;
-                setSliderMove({...sliderMove,endScreenPosition:2});
-            } else if (newScreenWidth < 800 && newScreenWidth >=550) {
+                setSliderMove({ ...sliderMove, endScreenPosition: 2 });
+                setCardsPerSlide(3)
+            } else if (newScreenWidth < 800 && newScreenWidth >= 550) {
                 newSlideStepResult = 50;
-                setSliderMove({...sliderMove,endScreenPosition:1});
+                setSliderMove({ ...sliderMove, endScreenPosition: 1 });
+                setCardsPerSlide(2)
             } else if (newScreenWidth < 550) {
                 newSlideStepResult = 100;
-                setSliderMove({...sliderMove,endScreenPosition:0});
+                setSliderMove({ ...sliderMove, endScreenPosition: 0 });
+                setCardsPerSlide(1)
             } else {
                 newSlideStepResult = 20;
-                setSliderMove({...sliderMove,endScreenPosition:4});
+                setSliderMove({ ...sliderMove, endScreenPosition: 4 });
+                setCardsPerSlide(5)
             }
 
             setSlideStepResult(newSlideStepResult);
@@ -110,9 +111,6 @@ const TeamSlider = () => {
         };
     }, [sliderMove.step, teamSliderData.length]);
 
-    useEffect(() => {
-        calculateActiveDot();
-    }, [sliderMove.sliderPosition]);
 
     return (
         <div className={s.slider__wrap}>
@@ -121,6 +119,7 @@ const TeamSlider = () => {
                 <div className={s.slider}>
                     <div className={s.arrow}>
                         <img src={arrowLeft} alt="" onClick={() => {
+                            setActiveDot(null)
                             if (sliderMove.startScreenPosition < 1) return;
                             let marginLeft = -sliderMove.step * (sliderMove.sliderPosition - 1);
                             setSliderMove({
@@ -129,8 +128,8 @@ const TeamSlider = () => {
                                 startScreenPosition: sliderMove.startScreenPosition - 1,
                                 endScreenPosition: sliderMove.endScreenPosition - 1
                             });
-                            setSliderStyle({...sliderStyle, marginLeft: marginLeft + "%"});
-                        }}/>
+                            setSliderStyle({ ...sliderStyle, marginLeft: marginLeft + "%" });
+                        }} />
                     </div>
                     <div className={s.slider_content_wrap}>
                         <div className={s.slider__content} style={sliderStyle}>
@@ -142,7 +141,7 @@ const TeamSlider = () => {
                                     `}
                                     >
                                         <div className={s.img__wrap}>
-                                            <img src={item.imgUrl} alt=""/>
+                                            <img src={item.imgUrl} alt="" />
                                         </div>
                                         <p className={s.bold}>{item.name}</p>
                                         <p>{item.status}</p>
@@ -153,6 +152,8 @@ const TeamSlider = () => {
                     </div>
                     <div className={s.arrow}>
                         <img src={arrowRight} alt="" onClick={() => {
+                            setActiveDot(null)
+
                             let marginLeft = -sliderMove.step * (sliderMove.sliderPosition + 1);
                             if (sliderMove.endScreenPosition + 1 > sliderMove.endPosition) return;
                             setSliderMove({
@@ -161,28 +162,28 @@ const TeamSlider = () => {
                                 startScreenPosition: sliderMove.startScreenPosition + 1,
                                 endScreenPosition: sliderMove.endScreenPosition + 1
                             });
-                            setSliderStyle({...sliderStyle, marginLeft: marginLeft + "%"});
-                        }}/>
+                            setSliderStyle({ ...sliderStyle, marginLeft: marginLeft + "%" });
+                        }} />
                     </div>
                 </div>
                 <div className={s.slider__dots}>
-                    {Array.from({ length: Math.ceil(teamSliderData.length / 5) }).map((_, index) => (
-                        <div
-                            className={`${s.dot} ${index === activeDot ? s.dot__active : null}`}
-                            key={index}
-                            onClick={() => {
-                                const newPosition = index * 5;
-                                if (newPosition > sliderMove.endPosition) return;
+                    {Array.from({ length: Math.ceil(teamSliderData.length / cardsPerSlide) }).map((item, index) => (
+                        <div className={`${s.dot} ${index === activeDot ? s.dot__active : null}`} key={index} onClick={() => {
+                            setActiveDot(index)
+                            const newPosition = teamSliderData.length % cardsPerSlide !== 0 && index === Math.floor(teamSliderData.length / cardsPerSlide)
+                                ? index * cardsPerSlide - (cardsPerSlide - teamSliderData.length % cardsPerSlide)
+                                : index * cardsPerSlide;
+                            if (newPosition > sliderMove.endPosition) return;
 
-                                const marginLeft = -sliderMove.step * newPosition;
-                                setSliderMove({
-                                    ...sliderMove,
-                                    sliderPosition: newPosition,
-                                    startScreenPosition: newPosition,
-                                    endScreenPosition: Math.min(newPosition + 4, sliderMove.endPosition),
-                                });
-                                setSliderStyle({...sliderStyle, marginLeft: `${marginLeft}%`});
-                            }}
+                            const marginLeft = -sliderMove.step * newPosition;
+                            setSliderMove({
+                                ...sliderMove,
+                                sliderPosition: newPosition,
+                                startScreenPosition: newPosition,
+                                endScreenPosition: Math.min(newPosition + 4, sliderMove.endPosition),
+                            });
+                            setSliderStyle({ ...sliderStyle, marginLeft: `${marginLeft}%` });
+                        }}
                         ></div>
                     ))}
                 </div>

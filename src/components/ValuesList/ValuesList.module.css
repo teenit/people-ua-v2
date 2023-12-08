@@ -49,6 +49,7 @@
 @media screen and (max-width:500px){
     .values__list{
         padding: 30px;
+        gap: 38px;
     }
     .values__inner{
         grid-template-rows: 0.5fr 1fr;

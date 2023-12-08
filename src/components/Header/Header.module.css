@@ -48,6 +48,7 @@
 }
 
 .lang__wrap {
+    width: max-content;
     border-radius: var(--button-border-radius);
     border: solid 1px var(--blue);
     display: flex;
@@ -61,7 +62,6 @@
 
 .lang__wrap span:hover {
     transition: all .3s;
-    /* font-weight: bolder; */
     cursor: pointer;
 }
 
@@ -75,7 +75,16 @@
 }
 
 @media screen and (max-width:800px){
-    .header__support__button, .header__phone__button, .lang__wrap{
+    .header__phone__button, .header__panel > .lang__wrap{
         display: none;
+    }
+    .header__support__button{
+        font-size: 15px;
+    }
+    .header__inner{
+        gap: 15px;
+    }
+    .header__panel{
+        gap: 15px;
     }
 }

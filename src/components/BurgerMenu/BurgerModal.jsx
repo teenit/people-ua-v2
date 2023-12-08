@@ -13,7 +13,7 @@ const BurgerModal = ({ setActive }) => {
                     <div className={`${s.line} ${s.l1}`}></div>
                     <div className={`${s.line} ${s.modal}`}></div>
                 </div>
-                {/* <Lang/> */}
+                <Lang/>
                 <div className={s.header__phone__button}>
                     <div className={s.header__icon__wrap}>
                         <img src={phone} alt="" />
@@ -21,7 +21,6 @@ const BurgerModal = ({ setActive }) => {
 
                     <span>+380932080760</span>
                 </div>
-                <button className={s.header__support__button}>підтримати</button>
             </div>
         </PortalModalRoot>
     )
