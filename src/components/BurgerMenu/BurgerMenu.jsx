@@ -12,7 +12,7 @@ const BurgerMenu = () => {
         <div className={`${s.line} ${ active&&(s.l1)}`}></div>
         <div className={`${s.line} ${ active&&(s.l2)}`}></div>
         <div className={`${s.line} ${ active&&(s.l3)}`}></div>
-        {active&&(<BurgerModal setActive={setActive}/>)}
+        {active?<BurgerModal setActive={setActive}/>:null}
     </div>
   )
 }

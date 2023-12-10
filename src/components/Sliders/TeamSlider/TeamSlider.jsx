@@ -12,39 +12,30 @@ const TeamSlider = () => {
     const teamSliderData = [
         {
             imgUrl: img1,
-            name: 'our team name1',
-            status: 'our team role1'
+            name: 'Андрій Видрін',
+            status: 'Адміністратор ГО'
         },
         {
             imgUrl: img2,
-            name: 'our team name2',
-            status: 'our team role2'
+            name: 'Дмитро Малашко',
+            status: 'Засновник'
         },
         {
             imgUrl: img3,
-            name: 'our team name3',
-            status: 'our team role3'
+            name: 'Павло Мельников',
+            status: 'Засновник, директор'
         },
         {
             imgUrl: img4,
-            name: 'our team name4',
-            status: 'our team role4'
+            name: 'Лілія Малашко',
+            status: 'Волонтер, психологиня'
         },
         {
             imgUrl: img5,
-            name: 'our team name5',
-            status: 'our team role5'
+            name: 'Данило Малашко',
+            status: 'Волонтер'
         },
-        {
-            imgUrl: img5,
-            name: 'our team name6',
-            status: 'our team role6'
-        },
-        {
-            imgUrl: img5,
-            name: 'our team name7',
-            status: 'our team role7'
-        },
+
     ];
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -68,49 +59,55 @@ const TeamSlider = () => {
         const changeResize = () => {
             const newScreenWidth = window.innerWidth;
             setScreenWidth(newScreenWidth);
-
+    
             let newSlideStepResult;
+            let newCardsPerSlide;
             if (newScreenWidth <= 1300 && newScreenWidth >= 1050) {
                 newSlideStepResult = 25;
-                setSliderMove({ ...sliderMove, endScreenPosition: 3 });
-                setCardsPerSlide(4)
+                newCardsPerSlide = 4;
             } else if (newScreenWidth <= 1050 && newScreenWidth >= 800) {
                 newSlideStepResult = 33.3;
-                setSliderMove({ ...sliderMove, endScreenPosition: 2 });
-                setCardsPerSlide(3)
+                newCardsPerSlide = 3;
             } else if (newScreenWidth < 800 && newScreenWidth >= 550) {
                 newSlideStepResult = 50;
-                setSliderMove({ ...sliderMove, endScreenPosition: 1 });
-                setCardsPerSlide(2)
+                newCardsPerSlide = 2;
             } else if (newScreenWidth < 550) {
                 newSlideStepResult = 100;
-                setSliderMove({ ...sliderMove, endScreenPosition: 0 });
-                setCardsPerSlide(1)
+                newCardsPerSlide = 1;
             } else {
                 newSlideStepResult = 20;
-                setSliderMove({ ...sliderMove, endScreenPosition: 4 });
-                setCardsPerSlide(5)
+                newCardsPerSlide = 5;
             }
-
+    
             setSlideStepResult(newSlideStepResult);
+            setCardsPerSlide(newCardsPerSlide);
+    
+            // Update slider styles
+            const newPosition = Math.min(sliderMove.sliderPosition, teamSliderData.length - newCardsPerSlide);
+            const marginLeft = -newSlideStepResult * newPosition;
             setSliderStyle({
                 ...sliderStyle,
-                marginLeft: -sliderMove.step * sliderMove.sliderPosition + "%",
-                width: `${teamSliderData.length * newSlideStepResult}%`
+                marginLeft: `${marginLeft}%`,
+                width: `${teamSliderData.length * newSlideStepResult}%`,
             });
-            setSliderMove(prevState => ({
-                ...prevState,
-                step: newSlideStepResult
-            }));
+    
+            setSliderMove({
+                ...sliderMove,
+                step: newSlideStepResult,
+                startScreenPosition: newPosition,
+                endScreenPosition: Math.min(newPosition + newCardsPerSlide - 1, teamSliderData.length - 1),
+            });
         };
-
+    
+        changeResize(); // Call the function once to set the initial state based on the current screen width
+    
         window.addEventListener('resize', changeResize);
-
+    
         return () => {
             window.removeEventListener('resize', changeResize);
         };
     }, [sliderMove.step, teamSliderData.length]);
-
+    
 
     return (
         <div className={s.slider__wrap}>

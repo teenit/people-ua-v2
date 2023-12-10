@@ -20,9 +20,12 @@
     justify-content: space-between;
     text-align: left;
     padding: 60px;
+    gap: 10px;
 }
 .img__wrap{
-    height: max-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .img__wrap img{
     width: 100%;
@@ -37,14 +40,20 @@
     text-transform: uppercase;
     font-weight: normal;
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:800px){
     .values__inner{
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr;
     }
-    .img__wrap img{
-        width: 100%;
-    }
+
+}
+@media screen and (max-width:1000px){
+.img__wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
 }
 @media screen and (max-width:500px){
     .values__list{

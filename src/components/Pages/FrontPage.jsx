@@ -53,17 +53,17 @@ const FrontPage = () => {
   const directionsData = [
     {
       imgUrl: directionsImg1,
-      title: "Проєкти Надія для сиріт UA",
+      title: "Надія для сиріт UA",
       description: "Happy Day, табори, навчальні курси, наставництво, курси з робототехніки"
     },
     {
       imgUrl: directionsImg2,
-      title: "Проєкти ID+IT",
+      title: "Клуби ID+IT",
       description: "Q-club, Клуб ПКУ, Групи надії для батьків, IT club, Книжковий клуб"
     },
     {
       imgUrl: directionsImg3,
-      title: "Молодіжний центр",
+      title: "Гумштаб ТНУ/Молодіжний центр",
       description: "Коробки допомоги, Підтримка ВПО, Школа волонтерів"
     },
     {
@@ -74,7 +74,7 @@ const FrontPage = () => {
     {
       imgUrl: directionsImg5,
       title: "Проєкти коаліції",
-      description: "ТОВД, Ресурсний центр, Case Manager Pro"
+      description: "Усі проєкти направлені на залучення організацій, навчальних закладів, волонтерів, ресурсних сімей в сумісну роботу задля досягнення спільних цілей."
     },
   ]
 
@@ -85,8 +85,8 @@ const FrontPage = () => {
     mission: false,
     goals: false
   })
-  const aboutUsText = "В центрі нашої роботи знаходяться взаємовідносини та довгострокові взаємодії за окремими кейсами та групами підтримки і розвитку. Кінцевою задачею нашої організації є свідомість, незалежність та самостійність людей нашої цільової аудиторії, з якими ми працюємо. Чи то сім’я СЖО або ВПО, чи то дитина-сирота або випускник інтернату - ми даємо можливість кожному отримувати підтримку, розвиватися, опановувати нові навички, брати участь в наших проєктах, а також ставати самодостатніми завдяки нашим співробітникам, волонтерам та партнерам. Наша основна задача - підтримати особистість у складний період та допомогти їй вийти із нього спроможною та розвинутою. Також ми намагаємося ділитися європейськими цінностями і принципами, але й не забуваємо про наше українське коріння."
-  const [readMore,setReadMore] = useState(true)
+  const aboutUsText = "В центрі нашої роботи знаходяться постійні взаємовідносини та довгострокові взаємодії за окремими кейсами та групами підтримки і розвитку. Кінцевою задачею нашої організації є свідомість, незалежність та самостійність людей нашої цільової аудиторії, з якими ми працюємо. Чи то сім’я СЖО або ВПО, чи то дитина-сирота або випускник інтернату -  ми даємо можливість кожному отримувати підтримку та допомогу, розвиватися та опановувати нові навички, брати участь в наших проєктах, а також ставати самодостатніми завдяки нашим співробітникам, волонтерам і  партнерам. Наша основна задача - підтримати людину у складний період та допомогти їй вийти із нього спроможною та розвинутою. Також ми намагаємося ділитися європейськими цінностями і принципами, але й не забуваємо про наше українське коріння."
+  const [readMore, setReadMore] = useState(false)
   return (
     <div className={s.wrap}>
       <div className={s.inner}>
@@ -94,9 +94,16 @@ const FrontPage = () => {
           <div className={s.first__screen__inner}>
             <div className={s.first__screen__info__wrap}>
               <div className={s.first__screen__info__inner}>
-                <p style={{ fontSize: "24px", fontFamily: "Kyiv Region" }}>ГО ЛЮДИ UA, місто Київ</p>
-                <p className={s.big__size}>Закладаємо фундамент нового українського суспільства</p>
+                <p style={{ fontSize: "24px", fontFamily: "Kyiv Region" }}>ГРОМАДСЬКА<br />
+                  ОРГАНІЗАЦІЯ<br />
+                  ЛЮДИ ЮЕЙ<br />
+                  місто Київ
+                </p>
+                <p>
+                <p className={s.big__size}>Ми закладаємо фундамент нового українського суспільства</p>
+                <p>через</p>
                 <p>Системний, комплексний та індивідуальний підхід до допомоги, підтримки та розвитку сімей, дітей та молоді</p>
+                </p>
               </div>
             </div>
             <FirstScreenForm />
@@ -143,7 +150,8 @@ const FrontPage = () => {
                 setVision({ ...vision, vision: false, mission: !vision.mission, goals: false })
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
-                  <p>Діти в турботливих сім'ях, які навчаються бути свідомою та розвинутою молоддю і формувати нове українське суспільство</p>
+                  <p>Залучення волонтерів, професіоналів, наставників, спроможних сімей та партнерів задля впливу на дітей, молодь, батьків та суспільство в цілому.
+                  </p>
                   <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
                   </div>
@@ -177,7 +185,11 @@ const FrontPage = () => {
               setVision({ ...vision, vision: false, mission: false, goals: !vision.goals })
             }}>
               <div className={`${s.vision__card__content} ${s.vision__desc}`}>
-                <p>Діти в турботливих сім'ях, які навчаються бути свідомою та розвинутою молоддю і формувати нове українське суспільство</p>
+                <p>Допомога, підтримка та захист прав дітей, сімей та молоді;<br />
+                  Всесторонній розвиток та залучення до участі в громадянському суспільстві;<br />
+                  Поширення здорового способу  життя, сімейних цінностей та духовності;<br />
+                  Сприяння тому, щоб усі діти жили у родинах.
+                </p>
                 <div className={s.vision__arrow__wrap}>
                   <img src={visionArrow} alt="" />
                 </div>
@@ -232,11 +244,11 @@ const FrontPage = () => {
         <div className={s.about__us__wrap}>
           <div className={s.about__us__info}>
             <h2 className={s.title}>Про нас</h2>
-            <p>{readMore||window.innerWidth>=1000?aboutUsText:aboutUsText.slice(0,400)+'...'}</p>
-            {window.innerWidth<1000 && (<div className={s.about__us__img__wrap} style={{cursor:'pointer'}}>
-              <img src={aboutUsArrow} alt="" onClick={()=>{
+            <p>{readMore || window.innerWidth >= 1000 ? aboutUsText : aboutUsText.slice(0, 400) + '...'}</p>
+            {window.innerWidth < 1000 && (<div className={`${s.about__us__img__wrap} ${readMore &&(s.about__us__img__wrap__rotated)}`} style={{ cursor: 'pointer' }}>
+              <img src={aboutUsArrow} alt="" onClick={() => {
                 setReadMore(!readMore)
-              }}/>
+              }} />
             </div>)}
             <button className={s.yellow__button}>Детальніше</button>
           </div>

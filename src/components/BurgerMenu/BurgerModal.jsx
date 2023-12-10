@@ -3,7 +3,7 @@ import s from './BurgerMenu.module.css'
 import PortalModalRoot from '../Portals/PortalModalRoot'
 import Lang from '../Header/Lang'
 import phone from '../../img/phone.svg'
-const BurgerModal = ({ setActive }) => {
+const BurgerModal = ({ setActive}) => {
     return (
         <PortalModalRoot>
             <div className={s.modal__inner}>

@@ -16,7 +16,7 @@ export class PortalModalRoot extends Component{
     render(){
            return (
                     createPortal(
-                        <div>  
+                        <div className={s.test}>  
                             {this.props.children}
                         </div>, 
                         this.el)  

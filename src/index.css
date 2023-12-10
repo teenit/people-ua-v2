@@ -7,6 +7,10 @@
   font-family: "Latoweb";
   src: url('../public/fonts/LATOWEB-REGULAR.TTF')
 }
+@font-face {
+  font-family: "Inter";
+  src: url('../public/fonts/Inter-Regular.ttf')
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
