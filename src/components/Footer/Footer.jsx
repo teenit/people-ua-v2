@@ -9,7 +9,8 @@ const Footer = () => {
     <div className={s.footer__wrap}>
       <div className={s.footer__inner}>
         <div className={s.img__wrap}>
-          <img src={logo} alt="" />
+          <a href="#"><img src={logo} alt="" /></a>
+          
         </div>
         <div className={s.footer__links__wrap}>
           <p><a href="#">Напрямки діяльності</a></p>
@@ -32,6 +33,7 @@ const Footer = () => {
         </div>
         <div className={s.footer__support__button}>підртримати</div>
       </div>
+      <p>Copyright © 2022 People UA | Powered by <a href="https://studio.itclub.in.ua/">IT Club studio</a></p>
     </div>
   )
 }

@@ -4,16 +4,18 @@ import PortalModalRoot from '../Portals/PortalModalRoot'
 import BurgerModal from './BurgerModal'
 
 const BurgerMenu = () => {
-    const [active,setActive] = useState(false)
+  const [active, setActive] = useState(false)
   return (
-    <div className={s.burger__wrap} onClick={()=>{
-        setActive(!active)
-    }}>
-        <div className={`${s.line} ${ active&&(s.l1)}`}></div>
-        <div className={`${s.line} ${ active&&(s.l2)}`}></div>
-        <div className={`${s.line} ${ active&&(s.l3)}`}></div>
-        {active?<BurgerModal setActive={setActive}/>:null}
-    </div>
+    <>
+      <div className={s.burger__wrap} onClick={() => {
+        setActive(true)
+      }}>
+        <div className={`${s.line} ${active && (s.l1)}`}></div>
+        <div className={`${s.line} ${active && (s.l2)}`}></div>
+        <div className={`${s.line} ${active && (s.l3)}`}></div>
+      </div>
+      {active ? <BurgerModal setActive={setActive} /> : null}
+    </>
   )
 }
 

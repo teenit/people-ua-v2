@@ -10,7 +10,7 @@ const Header = () => {
     <header className={s.header__wrap}>
       <div className={s.header__inner}>
           <div className={s.header__img}>
-            <img src={logo} alt="Логотип" />
+            <a href="#"><img src={logo} alt="Логотип" /></a>
           </div>
         <div className={s.header__panel}>
           <Lang/>
