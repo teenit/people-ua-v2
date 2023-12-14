@@ -89,7 +89,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     height: 125px;
     width: 50%;
     margin: auto;
@@ -106,7 +105,8 @@
     align-items: center;
     margin-left: 0;
 }
-.vision__card__content p{
+.vision__card__content > p{
+    text-align: center;
     margin: 0;
 }
 .vision__card:hover {
