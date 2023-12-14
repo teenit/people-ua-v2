@@ -1,7 +1,7 @@
 .burger__wrap{
     width: 21px;
     height: 21px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     flex-direction: column;
     cursor: pointer;
@@ -85,4 +85,9 @@
     color: var(--blue);
     text-transform: uppercase;
     width: max-content;
+}
+@media screen and (max-width:600px) {
+    .burger__wrap {
+        display: flex;
+    }
 }

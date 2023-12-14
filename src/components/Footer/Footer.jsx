@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
         <div className={s.footer__support__button}>підртримати</div>
       </div>
-      <p>Copyright © 2022 People UA | Powered by <a href="https://studio.itclub.in.ua/">IT Club studio</a></p>
+      <p>Copyright © 2023 People UA | Powered by <a href="https://studio.itclub.in.ua/">IT Club studio</a></p>
     </div>
   )
 }
