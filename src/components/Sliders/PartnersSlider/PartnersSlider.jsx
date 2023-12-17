@@ -5,6 +5,8 @@ import arrowRight from '../../../img/slider-arrow-right.svg';
 import img1 from '../../../img/partnersSlider/img1.png'
 import img2 from '../../../img/partnersSlider/img2.png'
 import img3 from '../../../img/partnersSlider/img3.png'
+import img4 from '../../../img/partnersSlider/img4.png'
+import img5 from '../../../img/partnersSlider/img5.png'
 
 const PartnersSlider = () => {
     const partnersSliderData = [
@@ -16,9 +18,17 @@ const PartnersSlider = () => {
         },
         {
             imgUrl: img3,
-        }
+        },
+        {
+            imgUrl: img4,
+            link: "https://www.itclub.in.ua/"
+        },
+        {
+            imgUrl: img5,
+            link: "https://www.facebook.com/HappyHomeUkraine/"
+        },
 
-    ];
+    ]
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [slideStepResult, setSlideStepResult] = useState(20);
@@ -41,7 +51,7 @@ const PartnersSlider = () => {
         const changeResize = () => {
             const newScreenWidth = window.innerWidth;
             setScreenWidth(newScreenWidth);
-    
+
             let newSlideStepResult;
             let newCardsPerSlide;
             if (newScreenWidth <= 1300 && newScreenWidth >= 1050) {
@@ -60,16 +70,16 @@ const PartnersSlider = () => {
                 newSlideStepResult = 20;
                 newCardsPerSlide = 5;
             }
-    
+
             setSlideStepResult(newSlideStepResult);
             setCardsPerSlide(newCardsPerSlide);
-    
+
             const newPosition = Math.min(sliderMove.sliderPosition, partnersSliderData.length - newCardsPerSlide);
             setSliderStyle({
                 ...sliderStyle,
                 width: `${partnersSliderData.length * newSlideStepResult}%`,
             });
-    
+
             setSliderMove({
                 ...sliderMove,
                 step: newSlideStepResult,
@@ -78,17 +88,17 @@ const PartnersSlider = () => {
                 endScreenPosition: Math.min(newPosition + newCardsPerSlide - 1, partnersSliderData.length - 1),
             });
         };
-    
+
         changeResize();
-    
+
         window.addEventListener('resize', changeResize);
-    
+
         return () => {
             window.removeEventListener('resize', changeResize);
         };
     }, [sliderMove.step, partnersSliderData.length]);
-    
-    
+
+
     return (
         <div className={s.slider__wrap}>
             <h2 className={s.title}>наші партнери</h2>
@@ -115,7 +125,9 @@ const PartnersSlider = () => {
                                     <div key={index} className={s.slider__card}
                                     >
                                         <div className={s.img__wrap}>
-                                            <img src={item.imgUrl} alt="" />
+                                            <a href={item.link}>
+                                                <img src={item.imgUrl} alt="" />
+                                            </a>
                                         </div>
                                     </div>
                                 );

@@ -21,6 +21,12 @@ import directionsImg3 from '../../img/directions/img3.png'
 import directionsImg4 from '../../img/directions/img4.png'
 import directionsImg5 from '../../img/directions/img5.png'
 
+import teamSliderImg1 from '../../img/teamSlider/img1.png';
+import teamSliderImg2 from '../../img/teamSlider/img2.png';
+import teamSliderImg3 from '../../img/teamSlider/img3.png';
+import teamSliderImg4 from '../../img/teamSlider/img4.png';
+import teamSliderImg5 from '../../img/teamSlider/img5.png';
+
 import ourPicturesImg1 from '../../img/ourPictures/img1.png'
 import ourPicturesImg2 from '../../img/ourPictures/img2.png'
 import ourPicturesImg3 from '../../img/ourPictures/img3.png'
@@ -31,6 +37,7 @@ import ourPicturesImg7 from '../../img/ourPictures/img7.png'
 import ourPicturesImg8 from '../../img/ourPictures/img8.png'
 import ourPicturesImg9 from '../../img/ourPictures/img9.png'
 import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
+import { Flipper } from 'react-flip-toolkit'
 const FrontPage = () => {
   const valueListsData = {
     ourValues: {
@@ -41,12 +48,12 @@ const FrontPage = () => {
     weWantToAct: {
       imgUrl: weWantToActImg,
       title: "Ми прагнемо діяти",
-      values: ["Професійно", "Цілісно", "Якісно", "Через взаємовідносини", "На перспективу", "Постійно комунікуючи", "Технологічно та сучасно"]
+      values: ["Професійно", "Цілісно", "Якісно", "Через взаємовідносини", "На перспективу", "Постійно комунікуючи", "Технологічно та сучасно", "Як рівний рівному"]
     },
     ourPrinciples: {
       imgUrl: valuesImg,
       title: "Наші принципи",
-      values: ["Рівний рівному", "Діяти з любов’ю та турботою", "Поважаючи відмінності/через повагу", "З гумором та доброю атмосферою"]
+      values: ["Діяти з любов’ю та турботою", "Поважаючи відмінності один одного", "Через повагу до людської гідності", "З гумором та доброю атмосферою", "В єдності"]
     },
   }
 
@@ -54,39 +61,115 @@ const FrontPage = () => {
     {
       imgUrl: directionsImg1,
       title: "Надія для сиріт UA",
-      description: "Дружні відносини, наставництво, навчальні курси, робототехніка, Happy Day, івенти, табори"
+      description: "Дружні відносини, наставництво, навчальні курси, робототехніка, Happy Day, івенти, табори",
+      isActive:false
     },
     {
       imgUrl: directionsImg2,
-      title: "Клуби ID+IT",
-      description: "Q-club (для підлітків 11-14 років), Клуб “Підготовка до успіху”, Групи надії для батьків, IT курси, Книжковий клуб"
+      title: "ID Club",
+      description: "Q-club (для підлітків 11-14 років), Клуб “Підготовка до успіху” (для підлітків 15-18 років), Групи надії для батьків, Книжковий клуб",
+      isActive:false
+    },
+    {
+      imgUrl: directionsImg2,
+      title: "IT Club",
+      description: "Курси програмування та робототехніки для дітей, підлітків і молоді",
+      isActive:false
     },
     {
       imgUrl: directionsImg3,
-      title: "Гумштаб ТНУ/Молодіжний центр",
-      description: "Підтримка студентів ВПО, залучення молоді в громадянське суспільство, школа волонтерів, коробки гум. допомоги"
+      title: "Гумштаб ТНУ та Молодіжний центр",
+      description: "Підтримка студентів ВПО, залучення молоді в громадянське суспільство, школа волонтерів, коробки гум. допомоги",
+      isActive:false
     },
     {
       imgUrl: directionsImg4,
-      title: "Проєкти підтримки",
-      description: "Ресурсний центр, Case Manager Pro, ТОВД - підхід, психологічна допомога, групи підтримки, діагностування"
+      title: "Підтримка UA під час кризи",
+      description: "Ресурсний центр, Case Manager Pro, ТОВД - підхід, оцінка потреб, індивідуальні та групові консультації, психологічна допомога, групи підтримки, діагностування",
+      isActive:false
     },
     {
       imgUrl: directionsImg5,
-      title: "Проєкти коаліції",
-      description: "Залучення організацій, вищих навчальних закладів, волонтерів, ресурсних сімей в сумісну роботу задля досягнення спільних цілей"
+      title: "Коаліція “Київ без сиріт”",
+      description: "Залучення партнерських організацій, вищих навчальних закладів, волонтерів, ресурсних сімей в сумісну роботу задля досягнення спільних цілей",
+      isActive:false
     },
   ]
+  const teamSliderData = {
+    team:{
+      title:"наша команда",
+      data:[
+        {
+            imgUrl: teamSliderImg1,
+            name: 'Андрій Видрін',
+            status: 'Адміністратор ГО'
+        },
+        {
+            imgUrl: teamSliderImg2,
+            name: 'Дмитро Малашко',
+            status: 'Засновник'
+        },
+        {
+            imgUrl: teamSliderImg3,
+            name: 'Павло Мельников',
+            status: 'Засновник, директор'
+        },
+        {
+            imgUrl: teamSliderImg4,
+            name: 'Лілія Малашко',
+            status: 'Залучена спеціалістка, психологиня'
+        },
+        {
+            imgUrl: teamSliderImg5,
+            name: 'Данило Малашко',
+            status: 'Залучений спеціаліст, викладач'
+        },
+    
+    ]
+    },
+    volunteers:{
+      title:"наші волонтери",
+      data:[
+        {
+            imgUrl: teamSliderImg1,
+            name: 'Андрій Видрін',
+            status: 'Адміністратор ГО'
+        },
+        {
+            imgUrl: teamSliderImg2,
+            name: 'Дмитро Малашко',
+            status: 'Засновник'
+        },
+        {
+            imgUrl: teamSliderImg3,
+            name: 'Павло Мельников',
+            status: 'Засновник, директор'
+        },
+        {
+            imgUrl: teamSliderImg4,
+            name: 'Лілія Малашко',
+            status: 'Залучена спеціалістка, психологиня'
+        },
+        {
+            imgUrl: teamSliderImg5,
+            name: 'Данило Малашко',
+            status: 'Залучений спеціаліст, викладач'
+        },
+    
+    ]
+    },
+  }
 
-
-  const ourPicturesData = [ourPicturesImg1, ourPicturesImg2, ourPicturesImg3, ourPicturesImg4, ourPicturesImg5, ourPicturesImg6, ourPicturesImg7, ourPicturesImg8, ourPicturesImg9]
+  const ourPicturesData = [ourPicturesImg1, ourPicturesImg2, ourPicturesImg3, ourPicturesImg4, ourPicturesImg5, ourPicturesImg6, ourPicturesImg7, ourPicturesImg8, ourPicturesImg9,ourPicturesImg1, ourPicturesImg2, ourPicturesImg3, ourPicturesImg4, ourPicturesImg5, ourPicturesImg6, ourPicturesImg7, ourPicturesImg8, ourPicturesImg9]
   const [vision, setVision] = useState({
     vision: false,
     mission: false,
     goals: false
   })
-  const aboutUsText = "В центрі нашої роботи знаходяться постійні взаємовідносини та довгострокові взаємодії за окремими кейсами та групами підтримки і розвитку. Кінцевою задачею нашої організації є свідомість, незалежність та самостійність людей нашої цільової аудиторії, з якими ми працюємо. Чи то сім’я СЖО або ВПО, чи то дитина-сирота або випускник інтернату -  ми даємо можливість кожному отримувати підтримку та допомогу, розвиватися та опановувати нові навички, брати участь в наших проєктах, а також ставати самодостатніми завдяки нашим співробітникам, волонтерам і  партнерам. Наша основна задача - підтримати людину у складний період та допомогти їй вийти із нього спроможною та розвинутою. Також ми намагаємося ділитися європейськими цінностями і принципами, але й не забуваємо про наше українське коріння."
+  const aboutUsText = "В центрі нашої роботи знаходяться постійні взаємовідносини та довгострокові взаємодії за окремими кейсами дітей, сімей та молоді, а також групами підтримки і розвитку. Кінцевою задачею нашої організації є свідомість, незалежність та самостійність людей, з якими ми працюємо. Чи то сім’я СЖО або ВПО, чи то дитина-сирота або випускник інтернату -  ми даємо можливість кожному отримувати підтримку та допомогу, розвиватися та опановувати нові навички, брати участь в наших проєктах, а також ставати самодостатніми завдяки нашим співробітникам, волонтерам і  партнерам. Наша основна задача - підтримати людину у складний період та допомогти їй вийти із нього спроможною та розвинутою. Також ми намагаємося ділитися європейськими цінностями і принципами, але й не забуваємо про наше українське коріння."
   const [readMore, setReadMore] = useState(false)
+  const [showAllPhotos, setShowAllPhotos] = useState(false)
+  const editedOurPicturesData = showAllPhotos?ourPicturesData:ourPicturesData.slice(0,9)
   return (
     <div className={s.wrap}>
       <div className={s.inner}>
@@ -101,8 +184,7 @@ const FrontPage = () => {
                 </p>
                 <p>
                 <p className={s.big__size}>Ми закладаємо фундамент нового українського суспільства</p>
-                <p>через</p>
-                <p>Системний, комплексний та індивідуальний підхід до допомоги, підтримки та розвитку сімей, дітей та молоді</p>
+                <p className={s.middle__size}>Використовуючи cистемний, комплексний та індивідуальний підхід до допомоги, підтримки та розвитку сімей, дітей та молоді</p>
                 </p>
               </div>
             </div>
@@ -114,12 +196,13 @@ const FrontPage = () => {
 
         <div className={s.vision__wrap}>
           <div className={s.vision__card__split}>
+            
             {vision.vision ?
               <div className={`${s.vision__card} ${s.vision__card__desc}`} onClick={() => {
                 setVision({ ...vision, vision: !vision.vision, mission: false, goals: false })
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
-                  <p>Діти в турботливих сім'ях, які навчаються бути свідомою та розвинутою молоддю і формувати нове українське суспільство</p>
+                  <p>Діти зростають в турботливих сім'ях, які навчаються бути свідомою та розвинутою молоддю і формувати нове українське суспільство</p>
                   <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
                   </div>
@@ -179,7 +262,6 @@ const FrontPage = () => {
 
 
           </div>
-
           {vision.goals ?
             <div className={`${s.vision__card} ${s.vision__card__desc}`} onClick={() => {
               setVision({ ...vision, vision: false, mission: false, goals: !vision.goals })
@@ -263,14 +345,15 @@ const FrontPage = () => {
         <ValuesList data={valueListsData.weWantToAct} />
 
 
-        <TeamSlider />
+        <TeamSlider teamSliderData={teamSliderData.team} />
+        {/* <TeamSlider teamSliderData={teamSliderData.volunteers} /> */}
 
 
         <div className={s.our__pictures__wrap}>
-          <h2 className={s.title}>наші світлини</h2>
+          <h2 className={s.title} id='our__pictures__title'>наші світлини</h2>
           <div className={s.our__pictures__inner}>
             <div className={s.our__pictures__grid}>
-              {ourPicturesData.map((item, index) => {
+              {editedOurPicturesData.map((item, index) => {
                 return (
                   <div key={index} className={s.our__pictures__grid__picture__wrap}>
                     <img src={item} alt="" />
@@ -278,7 +361,12 @@ const FrontPage = () => {
                 )
               })}
             </div>
-            <button className={s.yellow__button}>Детальніше</button>
+            <button className={s.yellow__button} onClick={()=>{
+              setShowAllPhotos(!showAllPhotos)
+              if(showAllPhotos){
+                document.getElementById("our__pictures__title").scrollIntoView({block:'start',behavior:'smooth'})
+              }
+            }}>{showAllPhotos?"Згорнути":"Детальніше"}</button>
           </div>
         </div>
 

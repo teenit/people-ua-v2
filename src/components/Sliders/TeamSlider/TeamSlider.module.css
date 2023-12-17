@@ -62,8 +62,12 @@ width: 100%;
     gap: 10px;
     width: 20%;
     transition: all .3s;
+    text-align: center;
 }
-
+/* .img__wrap img{
+    width: 180px;
+    height: 180px;
+} */
 .slider__card p {
     margin: 0;
 }
