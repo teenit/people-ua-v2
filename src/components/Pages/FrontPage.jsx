@@ -36,6 +36,8 @@ import ourPicturesImg6 from '../../img/ourPictures/img6.png'
 import ourPicturesImg7 from '../../img/ourPictures/img7.png'
 import ourPicturesImg8 from '../../img/ourPictures/img8.png'
 import ourPicturesImg9 from '../../img/ourPictures/img9.png'
+import idImg from '../../img/id.jpg'
+import itImg from '../../img/it.jpg'
 import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
 import { Flipper } from 'react-flip-toolkit'
 const FrontPage = () => {
@@ -65,13 +67,13 @@ const FrontPage = () => {
       isActive:false
     },
     {
-      imgUrl: directionsImg2,
+      imgUrl: idImg,
       title: "ID Club",
       description: "Q-club (для підлітків 11-14 років), Клуб “Підготовка до успіху” (для підлітків 15-18 років), Групи надії для батьків, Книжковий клуб",
       isActive:false
     },
     {
-      imgUrl: directionsImg2,
+      imgUrl: itImg,
       title: "IT Club",
       description: "Курси програмування та робототехніки для дітей, підлітків і молоді",
       isActive:false
@@ -162,9 +164,9 @@ const FrontPage = () => {
 
   const ourPicturesData = [ourPicturesImg1, ourPicturesImg2, ourPicturesImg3, ourPicturesImg4, ourPicturesImg5, ourPicturesImg6, ourPicturesImg7, ourPicturesImg8, ourPicturesImg9,ourPicturesImg1, ourPicturesImg2, ourPicturesImg3, ourPicturesImg4, ourPicturesImg5, ourPicturesImg6, ourPicturesImg7, ourPicturesImg8, ourPicturesImg9]
   const [vision, setVision] = useState({
-    vision: false,
-    mission: false,
-    goals: false
+    vision: true,
+    mission: true,
+    goals: true
   })
   const aboutUsText = "В центрі нашої роботи знаходяться постійні взаємовідносини та довгострокові взаємодії за окремими кейсами дітей, сімей та молоді, а також групами підтримки і розвитку. Кінцевою задачею нашої організації є свідомість, незалежність та самостійність людей, з якими ми працюємо. Чи то сім’я СЖО або ВПО, чи то дитина-сирота або випускник інтернату -  ми даємо можливість кожному отримувати підтримку та допомогу, розвиватися та опановувати нові навички, брати участь в наших проєктах, а також ставати самодостатніми завдяки нашим співробітникам, волонтерам і  партнерам. Наша основна задача - підтримати людину у складний період та допомогти їй вийти із нього спроможною та розвинутою. Також ми намагаємося ділитися європейськими цінностями і принципами, але й не забуваємо про наше українське коріння."
   const [readMore, setReadMore] = useState(false)
@@ -199,9 +201,10 @@ const FrontPage = () => {
             
             {vision.vision ?
               <div className={`${s.vision__card} ${s.vision__card__desc}`} onClick={() => {
-                setVision({ ...vision, vision: !vision.vision, mission: false, goals: false })
+                setVision({ ...vision, vision: !vision.vision, mission: vision.mission, goals: vision.goals })
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
+                <p className={s.title__vision}>наше бачення</p>
                   <p>Діти зростають в турботливих сім'ях, які навчаються бути свідомою та розвинутою молоддю і формувати нове українське суспільство</p>
                   <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
@@ -210,7 +213,7 @@ const FrontPage = () => {
               </div>
               :
               <div className={s.vision__card} onClick={() => {
-                setVision({ ...vision, vision: !vision.vision, mission: false, goals: false })
+                setVision({ ...vision, vision: !vision.vision, mission: vision.mission, goals: vision.goals })
               }}>
                 <div className={s.vision__card__content}>
                   <div className={s.vision__card__info}>
@@ -230,9 +233,10 @@ const FrontPage = () => {
             }
             {vision.mission ?
               <div className={`${s.vision__card} ${s.vision__card__desc}`} onClick={() => {
-                setVision({ ...vision, vision: false, mission: !vision.mission, goals: false })
+                setVision({ ...vision, vision: vision.vision, mission: !vision.mission, goals: vision.goals })
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
+                  <p className={s.title__vision}>наша місія</p>
                   <p>Залучення волонтерів, професіоналів, наставників, спроможних сімей та партнерів задля впливу на дітей, молодь, батьків та суспільство в цілому.
                   </p>
                   <div className={s.vision__arrow__wrap}>
@@ -242,7 +246,7 @@ const FrontPage = () => {
               </div>
               :
               <div className={s.vision__card} onClick={() => {
-                setVision({ ...vision, vision: false, mission: !vision.mission, goals: false })
+                setVision({ ...vision, vision: vision.vision, mission: !vision.mission, goals: vision.goals })
               }}>
                 <div className={s.vision__card__content}>
 
@@ -264,9 +268,10 @@ const FrontPage = () => {
           </div>
           {vision.goals ?
             <div className={`${s.vision__card} ${s.vision__card__desc}`} onClick={() => {
-              setVision({ ...vision, vision: false, mission: false, goals: !vision.goals })
+              setVision({ ...vision, vision: vision.vision, mission: vision.mission, goals: !vision.goals })
             }}>
               <div className={`${s.vision__card__content} ${s.vision__desc}`}>
+              <p className={s.title__vision}>наші цілі</p>
                 <ul>
                   <li>Допомога, підтримка та захист прав дітей, сімей та молоді</li>
                   <li>Їх всесторонній розвиток та залучення до участі в громадянському суспільстві</li>
@@ -281,7 +286,7 @@ const FrontPage = () => {
             </div>
             :
             <div className={s.vision__card} onClick={() => {
-              setVision({ ...vision, vision: false, mission: false, goals: !vision.goals })
+              setVision({ ...vision, vision: vision.vision, mission: vision.mission, goals: !vision.goals })
             }}>
               <div className={s.vision__card__content}>
                 <div className={s.vision__card__info}>
