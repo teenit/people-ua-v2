@@ -12,12 +12,15 @@ const PartnersSlider = () => {
     const partnersSliderData = [
         {
             imgUrl: img1,
+            link:"https://ukrainabezsyrit.org/"
         },
         {
             imgUrl: img2,
+            link:"https://ccx.org.ua/"
         },
         {
             imgUrl: img3,
+            link:"https://tnu.edu.ua/"
         },
         {
             imgUrl: img4,

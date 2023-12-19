@@ -13,13 +13,15 @@ import TeamSlider from '../Sliders/TeamSlider/TeamSlider'
 import ValuesList from '../ValuesList/ValuesList'
 
 import valuesImg from '../../img/valueList/values.png'
-import weWantToActImg from '../../img/valueList/weWantToAct.png'
+import weWantToActImg from '../../img/valueList/weWantToAct.jpeg'
+import ourPrinciplesImg from '../../img/valueList/ourPrinciples.jpeg'
 
 import directionsImg1 from '../../img/directions/img1.png'
-import directionsImg2 from '../../img/directions/img2.png'
-import directionsImg3 from '../../img/directions/img3.png'
+import directionsImg2 from '../../img/directions/img2.jpeg'
+import directionsImg3 from '../../img/directions/img3.jpg'
 import directionsImg4 from '../../img/directions/img4.png'
 import directionsImg5 from '../../img/directions/img5.png'
+import directionsImg6 from '../../img/directions/img6.png'
 
 import teamSliderImg1 from '../../img/teamSlider/img1.png';
 import teamSliderImg2 from '../../img/teamSlider/img2.png';
@@ -36,10 +38,8 @@ import ourPicturesImg6 from '../../img/ourPictures/img6.png'
 import ourPicturesImg7 from '../../img/ourPictures/img7.png'
 import ourPicturesImg8 from '../../img/ourPictures/img8.png'
 import ourPicturesImg9 from '../../img/ourPictures/img9.png'
-import idImg from '../../img/id.jpg'
-import itImg from '../../img/it.jpg'
+
 import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
-import { Flipper } from 'react-flip-toolkit'
 const FrontPage = () => {
   const valueListsData = {
     ourValues: {
@@ -53,7 +53,7 @@ const FrontPage = () => {
       values: ["Професійно", "Цілісно", "Якісно", "Через взаємовідносини", "На перспективу", "Постійно комунікуючи", "Технологічно та сучасно", "Як рівний рівному"]
     },
     ourPrinciples: {
-      imgUrl: valuesImg,
+      imgUrl: ourPrinciplesImg,
       title: "Наші принципи",
       values: ["Діяти з любов’ю та турботою", "Поважаючи відмінності один одного", "Через повагу до людської гідності", "З гумором та доброю атмосферою", "В єдності"]
     },
@@ -64,37 +64,35 @@ const FrontPage = () => {
       imgUrl: directionsImg1,
       title: "Надія для сиріт UA",
       description: "Дружні відносини, наставництво, навчальні курси, робототехніка, Happy Day, івенти, табори",
-      isActive:false
+      fullDescription:"Задача: підтримати дитину-сироту, допомогти інтегруватися у суспільство через соціалізацію, профорієнтацію та освіту, а також знайти наставника та турботливу сім’ю задля подальшого розвитку. Усі проєкти направлені на роботу з дітьми-сиротами, які знаходяться в інтернатних закладах, сім’ях опікунів, прийомних сім’ях або випустилися з них. Як? Через регулярні волонтерські поїздки в дитячі центри міста Києва та побудову дружніх відносин, наставництво, навчальні курси, майстер-класи, курси робототехніки, виїзди Happy Day, івенти і табори."
     },
     {
-      imgUrl: idImg,
+      imgUrl: directionsImg2,
       title: "ID Club",
       description: "Q-club (для підлітків 11-14 років), Клуб “Підготовка до успіху” (для підлітків 15-18 років), Групи надії для батьків, Книжковий клуб",
-      isActive:false
-    },
-    {
-      imgUrl: itImg,
-      title: "IT Club",
-      description: "Курси програмування та робототехніки для дітей, підлітків і молоді",
-      isActive:false
+      fullDescription:"Усі проєкти направлені на роботу з дітьми, підлітками та їх батьками - з сім’ями, які опинилися у кризовій ситуації через війну. Задача: підтримати сім’ю та допомогти їй вийти з кризової ситуації через оцінку потреб, складання особистого плану та розвитку. Допомогти дітям та підлітками зрозуміти, хто вони, здобути навички через різноманітні курси, підліткові клуби, а також стати більш сучасними та технологічними через навчання IT. Q-club (для підлітків 11-14 років), Клуб “Підготовка до успіху” (для підлітків 15-18 років), Групи надії для батьків, Книжковий клуб."
     },
     {
       imgUrl: directionsImg3,
-      title: "Гумштаб ТНУ та Молодіжний центр",
-      description: "Підтримка студентів ВПО, залучення молоді в громадянське суспільство, школа волонтерів, коробки гум. допомоги",
-      isActive:false
+      title: "IT Club",
+      description: "Курси програмування та робототехніки для дітей, підлітків і молоді",
     },
     {
       imgUrl: directionsImg4,
-      title: "Підтримка UA під час кризи",
-      description: "Ресурсний центр, Case Manager Pro, ТОВД - підхід, оцінка потреб, індивідуальні та групові консультації, психологічна допомога, групи підтримки, діагностування",
-      isActive:false
+      title: "Гумштаб ТНУ та Молодіжний центр",
+      description: "Підтримка студентів ВПО, залучення молоді в громадянське суспільство, школа волонтерів, коробки гум. допомоги",
+      fullDescription:"Усі проєкти направлені на роботу з внутрішньо-переміщеними студентами, викладачами та іншими людьми. Задача: підтримати внутрішньо переміщену молодь через особисті зустрічі та групи взаємодії, гуманітарну допомогу, просвітницьку діяльність та залучення до волонтерства. Підтримка студентів ВПО, залучення молоді в громадянське суспільство, школа волонтерів, коробки гум. допомоги."
     },
     {
       imgUrl: directionsImg5,
+      title: "Підтримка UA під час кризи",
+      description: "Ресурсний центр, Case Manager Pro, ТОВД - підхід, оцінка потреб, індивідуальні та групові консультації, психологічна допомога, групи підтримки, діагностування",
+    },
+    {
+      imgUrl: directionsImg6,
       title: "Коаліція “Київ без сиріт”",
       description: "Залучення партнерських організацій, вищих навчальних закладів, волонтерів, ресурсних сімей в сумісну роботу задля досягнення спільних цілей",
-      isActive:false
+      fullDescription:"Усі проєкти направлені на психологічну підтримку сім’ям, дітям та молоді. Задача: допомогти вирішити проблеми психологічного характеру через оцінку потреб, індивідуальні та групові консультації, групи підтримки, побудову дитячо-батьківських відносин, арт-терапію та інше. Проєкти: Ресурсний центр, Case Manager Pro, ТОВД - підхід, оцінка потреб, індивідуальні та групові консультації, психологічна допомога, групи підтримки, діагностування"
     },
   ]
   const teamSliderData = {
@@ -184,10 +182,10 @@ const FrontPage = () => {
                   ЛЮДИ ЮЕЙ<br />
                   місто Київ
                 </p>
-                <p>
-                <p className={s.big__size}>Ми закладаємо фундамент нового українського суспільства</p>
-                <p className={s.middle__size}>Використовуючи cистемний, комплексний та індивідуальний підхід до допомоги, підтримки та розвитку сімей, дітей та молоді</p>
-                </p>
+                <div>
+                <p className={s.big__size}>Закладаємо фундамент нового українського суспільства</p>
+                <p className={s.middle__size}>Використовуючи систематичний, комплексний та індивідуальний підхід до допомоги, підтримки і розвитку дітей, сімей та молоді в громадах</p>
+                </div>
               </div>
             </div>
             <FirstScreenForm />
@@ -205,7 +203,7 @@ const FrontPage = () => {
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
                 <p className={s.title__vision}>наше бачення</p>
-                  <p>Діти зростають в турботливих сім'ях, які навчаються бути свідомою та розвинутою молоддю і формувати нове українське суспільство</p>
+                  <p>Діти зростають в турботливих сім'ях, навчаються бути розвинутою молоддю і свідомо долучаються до формування нового українського суспільства</p>
                   <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
                   </div>
@@ -273,10 +271,10 @@ const FrontPage = () => {
               <div className={`${s.vision__card__content} ${s.vision__desc}`}>
               <p className={s.title__vision}>наші цілі</p>
                 <ul>
-                  <li>Допомога, підтримка та захист прав дітей, сімей та молоді</li>
-                  <li>Їх всесторонній розвиток та залучення до участі в громадянському суспільстві</li>
-                  {/* <li>Поширення українських та сімейних цінностей, духовності та здорового способу життя</li>
-                  <li>Сприяння тому, щоб усі діти жили у родинах.</li> */}
+                  <li>Сприяння тому, щоб усі діти жили у турботливих родинах</li>
+                  <li>Надання допомоги, підтримки та захисту прав дітей, сімей та молоді</li>
+                  <li>Заохочення їх до всебічного розвитку та участі в громадянському суспільстві</li>
+                  <li>Поширення серед них українських і сімейних цінностей, духовності та здорового способу життя</li>
                 </ul>
 
                 <div className={s.vision__arrow__wrap}>

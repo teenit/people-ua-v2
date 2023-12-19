@@ -205,7 +205,7 @@
     flex-direction: column;
     gap: 24px;
     padding: 12px;
-    /* min-height: 175px; */
+    min-height: 175px;
 }
 .directions__card__info h3, .directions__card__info p{
     margin: 0;
@@ -234,14 +234,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-/* .expanded {
-    position: fixed;
-    height: 100%;
-    background-color: #fff;
-    width: 100%;
-  } */
-  
+} 
 .more__about__button {
     width: 100%;
     border-radius: var(--button-border-radius);
@@ -252,7 +245,6 @@
     display: flex;
     justify-content: center;
 }
-
 .more__about__button__inner {
     width: 99%;
     display: flex;
@@ -382,4 +374,39 @@
     .more__about__button__arrow__wrap{
         display: none;
     }
+}
+
+.modal__inner{
+    max-width: 50%;
+    height: max-content;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px;
+    position: relative;
+}
+.close_btn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.close_btn span {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background-color: #000;
+}
+.close_btn .f {
+    transform: rotate(45deg);
+}
+.close_btn .s {
+    transform: rotate(-45deg);
+}
+.modal__inner h2{
+    text-align: center;
 }
