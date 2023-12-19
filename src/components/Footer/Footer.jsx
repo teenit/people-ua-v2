@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './Footer.module.css'
 import logo from '../../img/footer-logo.svg'
 import phone from '../../img/phone.svg'
 import location from '../../img/location.svg'
+import PortalModalRoot from '../Portals/PortalModalRoot'
+import DonatForm from '../Forms/DonatForm'
 
 const Footer = () => {
+  const [donate, setDonat] = useState ({
+    openModal:false
+  })
   return (
     <div className={s.footer__wrap}>
       <div className={s.footer__inner}>
@@ -31,9 +36,18 @@ const Footer = () => {
             <span>+380932080760</span>
           </div>
         </div>
-        <div className={s.footer__support__button}>підртримати</div>
+        <div onClick={()=>{
+            setDonat({...donate,openModal:true})
+          }} className={s.footer__support__button}>підртримати</div>
       </div>
       <p>Copyright © 2023 People UA | Powered by <a href="https://studio.itclub.in.ua/">IT Club studio</a></p>
+      {
+        donate.openModal && (
+          <PortalModalRoot>
+            <DonatForm close = {()=>setDonat({...donate,openModal:false})}/>
+          </PortalModalRoot>
+        )
+      }
     </div>
   )
 }

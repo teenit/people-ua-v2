@@ -1,0 +1,76 @@
+.form{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+    
+}
+.form-inner{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title {
+    font-size: 20px;
+
+}
+.close_btn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.close_btn span {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background-color: #000;
+}
+.close_btn .f {
+    transform: rotate(45deg);
+}
+.close_btn .s {
+    transform: rotate(-45deg);
+}
+.body{
+    max-height: 500px;
+    overflow-y: scroll;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.line{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tem_title{
+    font-size: 14px;
+    font-weight: 400;
+}
+.item_description{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Latoweb';
+}
+.line_title {
+    font-size: 18px;
+    font-weight: 600;
+}
+.footer{}
