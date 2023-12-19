@@ -24,28 +24,40 @@ const DonatForm = ({close}) => {
                         <div className={s.line_title}>На рахунок "ГО ЛЮДИ ЮЕЙ"</div>
                         <div className={s.item}>
                             <div className={s.item_title}>Найменування організації:</div>
-                            <div className={s.item_description}>ЛЮДИ ЮЕЙ ГО</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>ЛЮДИ ЮЕЙ ГО</div>
                         </div>
                         <div className={s.item}>
                             <div className={s.item_title}>Код отримувача:</div>
-                            <div className={s.item_description}>44814017</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>44814017</div>
                         </div>
                         <div className={s.item}>
                             <div className={s.item_title}>Назва банку:</div>
-                            <div className={s.item_description}>АТ КБ "ПРИВАТБАНК"</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>АТ КБ "ПРИВАТБАНК"</div>
                         </div>
                         <div className={s.item}>
                             <div className={s.item_title}>Рахунок отримувача у форматі IBAN: </div>
-                            <div className={s.item_description}>UA323052990000026006030125781</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>UA323052990000026006030125781</div>
                         </div>
                         <div className={s.item}>
                             <div className={s.item_title}>Валюта:  </div>
-                            <div className={s.item_description}>UAH</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>UAH</div>
                         </div>
                 
                         <div className={s.item}>
                             <div className={s.item_title}>Призначення платежу</div>
-                            <div className={s.item_description}>Безповоротна грошова допомога</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>Безповоротна грошова допомога</div>
                         </div>
                  
                     </div>
@@ -53,11 +65,15 @@ const DonatForm = ({close}) => {
                         <div className={s.line_title}>На карту Приват банку</div>
                         <div className={s.item}>
                             <div className={s.item_title}>Номер карти</div>
-                            <div className={s.item_description}>5169335100430582</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>5169335100430582</div>
                         </div>
                         <div className={s.item}>
                             <div className={s.item_title}>Призначення платежу</div>
-                            <div className={s.item_description}>Безповоротна грошова допомога</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>Безповоротна грошова допомога</div>
                         </div>
                     </div>
                     {/* <div className={s.line}>
