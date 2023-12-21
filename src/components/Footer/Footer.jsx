@@ -14,7 +14,7 @@ const Footer = () => {
     <div className={s.footer__wrap}>
       <div className={s.footer__inner}>
         <div className={s.img__wrap}>
-          <a href="#"><img src={logo} alt="" /></a>
+          <a href="#"><img src={logo} alt="Громадська органзація ЛЮДИ ЮЕЙ" /></a>
           
         </div>
         <div className={s.footer__links__wrap}>
