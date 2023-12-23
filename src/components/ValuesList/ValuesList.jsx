@@ -7,7 +7,7 @@ const ValuesList = ({data}) => {
         <h2 className={s.title}>{data.title}</h2>
         <div className={s.values__inner}>
             <div className={s.img__wrap}>
-                <img src={data.imgUrl} alt="" />
+                <img src={data.imgUrl} alt={data.title} />
             </div>
             <div className={s.values__list}>
                 {data.values.map((item,index)=>{

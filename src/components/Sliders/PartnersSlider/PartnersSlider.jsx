@@ -7,6 +7,9 @@ import img2 from '../../../img/partnersSlider/img2.png'
 import img3 from '../../../img/partnersSlider/img3.png'
 import img4 from '../../../img/partnersSlider/img4.png'
 import img5 from '../../../img/partnersSlider/img5.png'
+import img6 from '../../../img/partnersSlider/img6.png'
+import img7 from '../../../img/partnersSlider/img7.jpg'
+import img8 from '../../../img/partnersSlider/img8.png'
 
 const PartnersSlider = () => {
     const partnersSliderData = [
@@ -29,6 +32,18 @@ const PartnersSlider = () => {
         {
             imgUrl: img5,
             link: "https://www.facebook.com/HappyHomeUkraine/"
+        },
+        {
+            imgUrl: img6,
+            link: "https://orphanshope.org/ukraine/"
+        },
+        {
+            imgUrl: img7,
+            link: "https://www.facebook.com/icdt.org.ua/"
+        },
+        {
+            imgUrl: img8,
+            link: "https://maximumfond.org.ua/"
         },
 
     ]
@@ -128,7 +143,7 @@ const PartnersSlider = () => {
                                     <div key={index} className={s.slider__card}
                                     >
                                         <div className={s.img__wrap}>
-                                            <a href={item.link}>
+                                            <a href={item.link} target="_blank">
                                                 <img src={item.imgUrl} alt="" />
                                             </a>
                                         </div>

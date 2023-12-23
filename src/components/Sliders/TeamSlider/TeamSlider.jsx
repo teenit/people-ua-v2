@@ -106,7 +106,7 @@ const TeamSlider = ({teamSliderData}) => {
                                     `}
                                     >
                                         <div className={s.img__wrap}>
-                                            <img src={item.imgUrl} alt="" />
+                                            <img src={item.imgUrl} alt={item.name} />
                                         </div>
                                         <p className={s.bold}>{item.name}</p>
                                         <p>{item.status}</p>
