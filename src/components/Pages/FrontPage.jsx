@@ -113,7 +113,7 @@ const FrontPage = () => {
   ]
   const newsData = [
     {
-      imgUrl: directionsImg1,
+      imgUrl: newsImg1,
       title: "Пост №1",
       description: "Школа волонтерів і святкування Дня волонтера 5 грудня",
       fullDescription: [{
@@ -127,7 +127,7 @@ const FrontPage = () => {
     ]
     },
     {
-      imgUrl: directionsImg2,
+      imgUrl: newsImg2,
       title: "Пост №2",
       description: "Ми повернулися в Маяк: провели курс 7 звичок, 2 літніх табори, 8 «хеппі деїв», 15 уроків робототехніки та загалом 120 різноманітних заходів і зустрічей",
       fullDescription: [{
@@ -140,7 +140,7 @@ const FrontPage = () => {
       }
     ]    },
     {
-      imgUrl: directionsImg3,
+      imgUrl: newsImg3,
       title: "Пост №3",
       description: "Всі наші клуби ID та IT: підсумки нашої роботи з дітьми, підлітками, молоддю та батьками за останні 2 роки",
       fullDescription: [{

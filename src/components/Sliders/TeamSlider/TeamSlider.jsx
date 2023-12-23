@@ -84,7 +84,7 @@ const TeamSlider = ({teamSliderData}) => {
                 <div className={s.slider}>
                     <div className={s.arrow}>
                         <img src={arrowLeft} alt="" onClick={() => {
-                            setActiveDot(null)
+                            
                             if (sliderMove.startScreenPosition < 1) return;
                             let marginLeft = -sliderMove.step * (sliderMove.sliderPosition - 1);
                             setSliderMove({
@@ -94,6 +94,7 @@ const TeamSlider = ({teamSliderData}) => {
                                 endScreenPosition: sliderMove.endScreenPosition - 1
                             });
                             setSliderStyle({ ...sliderStyle, marginLeft: marginLeft + "%" });
+                            setActiveDot(activeDot-1)
                         }} />
                     </div>
                     <div className={s.slider_content_wrap}>
@@ -117,7 +118,6 @@ const TeamSlider = ({teamSliderData}) => {
                     </div>
                     <div className={s.arrow}>
                         <img src={arrowRight} alt="" onClick={() => {
-                            setActiveDot(null)
 
                             let marginLeft = -sliderMove.step * (sliderMove.sliderPosition + 1);
                             if (sliderMove.endScreenPosition + 1 > sliderMove.endPosition) return;
@@ -128,16 +128,15 @@ const TeamSlider = ({teamSliderData}) => {
                                 endScreenPosition: sliderMove.endScreenPosition + 1
                             });
                             setSliderStyle({ ...sliderStyle, marginLeft: marginLeft + "%" });
+                            setActiveDot(activeDot+1)
                         }} />
                     </div>
                 </div>
                 <div className={s.slider__dots}>
                     {Array.from({ length: Math.ceil(teamSliderData.data.length / cardsPerSlide) }).map((item, index) => (
                         <div className={`${s.dot} ${index === activeDot ? s.dot__active : null}`} key={index} onClick={() => {
-                            setActiveDot(index)
-                            const newPosition = teamSliderData.data.length % cardsPerSlide !== 0 && index === Math.floor(teamSliderData.data.length / cardsPerSlide)
-                                ? index * cardsPerSlide - (cardsPerSlide - teamSliderData.data.length % cardsPerSlide)
-                                : index * cardsPerSlide;
+                            setActiveDot(index);
+                            const newPosition = index * cardsPerSlide;
                             if (newPosition > sliderMove.endPosition) return;
 
                             const marginLeft = -sliderMove.step * newPosition;
@@ -145,11 +144,11 @@ const TeamSlider = ({teamSliderData}) => {
                                 ...sliderMove,
                                 sliderPosition: newPosition,
                                 startScreenPosition: newPosition,
-                                endScreenPosition: Math.min(newPosition + 4, sliderMove.endPosition),
+                                endScreenPosition: Math.min(newPosition + cardsPerSlide - 1, sliderMove.endPosition),
                             });
                             setSliderStyle({ ...sliderStyle, marginLeft: `${marginLeft}%` });
                         }}
-                        ></div>
+                    ></div>
                     ))}
                 </div>
             </div>
