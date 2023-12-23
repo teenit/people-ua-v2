@@ -1,7 +1,27 @@
 import React, { useState } from "react";
 import s from './DonatForm.module.css';
+import arrowImg from './../../img/read-more.svg';
+import monoImg from './../../img/uah_50.png'
+import privatImg from './../../img/privatbank-r0-square_medium.jpg'
+import monoLogoImg from './../../img/monobank.jpg'
 
-
+const DropElement = ({children, title, active = false}) => {
+    const [state, setState] = useState({
+        active:active
+    })
+    return (
+        <div className={`${s.drop__container} ${state.active ? s.active : ''}`}>
+            <div className={s.drop__title}  onClick={()=>setState({...state,active:!state.active})}>
+                <div className={s.drop__title__elem}>{title}</div>
+                <div className={`${s.drop__arrow} ${state.active ? s.active : ''}`}><img src={arrowImg} alt="Read more" /></div>
+            </div>
+            <div className={`${s.drop__description} ${state.active ? s.active : ''}`}>
+                <div className={s.drop__line}></div>
+                {children}
+            </div>
+        </div>
+    )
+}
 
 
 const DonatForm = ({close}) => {
@@ -20,9 +40,11 @@ const DonatForm = ({close}) => {
                     </div>
                 </div>
                 <div className={s.body}>
-                    <div className={s.line}>
-                        <div className={s.line_title}>На рахунок "ГО ЛЮДИ ЮЕЙ"</div>
-                        <div className={s.item}>
+                    <DropElement 
+                        title={'На рахунок "ГО ЛЮДИ ЮЕЙ"'}
+                        active={true}
+                        children={<div className="children__elements">
+                            <div className={s.item}>
                             <div className={s.item_title}>Найменування організації:</div>
                             <div className={s.item_description} onClick={(e)=>{
                                 navigator.clipboard.writeText(e.target.innerText)
@@ -59,11 +81,12 @@ const DonatForm = ({close}) => {
                                 navigator.clipboard.writeText(e.target.innerText)
                             }}>Безповоротна грошова допомога</div>
                         </div>
-                 
-                    </div>
-                    <div className={s.line}>
-                        <div className={s.line_title}>На карту Приват банку</div>
-                        <div className={s.item}>
+                        </div>}
+                    />
+                    <DropElement 
+                        title={<><span>На карту Приват банку</span><img className={s.monoImg} src={privatImg} alt="" /></>}
+                        children={<div>
+                            <div className={s.item}>
                             <div className={s.item_title}>Номер карти</div>
                             <div className={s.item_description} onClick={(e)=>{
                                 navigator.clipboard.writeText(e.target.innerText)
@@ -75,7 +98,33 @@ const DonatForm = ({close}) => {
                                 navigator.clipboard.writeText(e.target.innerText)
                             }}>Безповоротна грошова допомога</div>
                         </div>
-                    </div>
+                        </div>}
+                    />
+                    <DropElement 
+                        title={<><span>На моно банку</span><img className={s.monoImg} src={monoImg} alt="Mono banka" />
+                        <img className={s.monoImg} src={monoLogoImg} alt="Mono bank дщпщ" /></>}
+                        children={<div>
+                            <div className={s.item}>
+                                <div className={s.item_title}>За посиланням</div>
+                                <div className={s.item_description}>
+                                    <a href="https://send.monobank.ua/jar/9yixFpAKaA" target="_blank" rel="noopener noreferrer">МОНО БАНКА</a>
+                                </div>
+                            </div>
+                                <div className={s.item}>
+                                <div className={s.item_title}>Номер карти банки</div>
+                                <div className={s.item_description} onClick={(e)=>{
+                                    navigator.clipboard.writeText(e.target.innerText)
+                                }}>5375 4112 1108 2388</div>
+                            </div>
+                            <div className={s.item}>
+                                <div className={s.item_title}>Призначення платежу</div>
+                                <div className={s.item_description} onClick={(e)=>{
+                                    navigator.clipboard.writeText(e.target.innerText)
+                                }}>Безповоротна грошова допомога</div>
+                            </div>
+                            </div>}
+                    />
+                    
                     {/* <div className={s.line}>
                         <div className={s.line_title}></div>
                         <div className={s.item}>
