@@ -20,6 +20,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script type="text/javascript" src="https://static.liqpay.ua/elements/customElements.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -33,6 +34,17 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <lp-provider lp-data="your_data" lp-signature="your_signature">
+      <lp-apple-pay mode="black"></lp-apple-pay>
+  </lp-provider>
+  <lp-provider lp-data="your_data" lp-signature="your_signature">
+      <lp-privat24-pay mode="black"></lp-privat24-pay>
+  </lp-provider>
+      <script>
+          const provider = document.querySelector('lp-provider');
+          provider.addEventListener('onpaymentsuccess', (customEvent) => { console.log(customEvent); }); // колбек для обработки успешного платежа
+          provider.addEventListener('onpaymenterror', (customEvent) => { console.log(customEvent); }); // колбек для обработки ошибки
+      </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
