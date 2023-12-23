@@ -92,6 +92,7 @@ const FrontPage = () => {
       imgUrl: directionsImg3,
       title: "IT Club",
       description: "Курси програмування та робототехніки для дітей, підлітків і молоді",
+      fullDescription: "Курси програмування та робототехніки для дітей, підлітків і молоді",
     },
     {
       imgUrl: directionsImg4,
@@ -103,6 +104,7 @@ const FrontPage = () => {
       imgUrl: directionsImg5,
       title: "Підтримка UA під час кризи",
       description: "Ресурсний центр, Case Manager Pro, ТОВД - підхід, оцінка потреб, індивідуальні та групові консультації, психологічна допомога, групи підтримки, діагностування",
+      fullDescriptiondescription: "Ресурсний центр, Case Manager Pro, ТОВД - підхід, оцінка потреб, індивідуальні та групові консультації, психологічна допомога, групи підтримки, діагностування",
     },
     {
       imgUrl: directionsImg6,
