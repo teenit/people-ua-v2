@@ -15,37 +15,45 @@ const PartnersSlider = () => {
     const partnersSliderData = [
         {
             imgUrl: img6,
-            link: "https://orphanshope.org/ukraine/"
+            link: "https://orphanshope.org/ukraine/",
+            title:"Orphan's Hope"
         },
         {
             imgUrl: img4,
-            link: "https://www.itclub.in.ua/"
+            link: "https://www.itclub.in.ua/",
+            title:"IT Club Studio"
         },
         {
             imgUrl: img1,
-            link:"https://ukrainabezsyrit.org/"
+            link:"https://ukrainabezsyrit.org/",
+            title:"Україна без Сиріт"
         },
         {
             imgUrl: img2,
-            link:"https://ccx.org.ua/"
+            link:"https://ccx.org.ua/",
+            title:"ССХ Україна"
         },
 
         {
             imgUrl: img3,
-            link:"https://tnu.edu.ua/"
+            link:"https://tnu.edu.ua/",
+            title:"Таврійський Національний Університет"
         },
 
         {
             imgUrl: img5,
-            link: "https://www.facebook.com/HappyHomeUkraine/"
+            link: "https://www.facebook.com/HappyHomeUkraine/",
+            title:"Happy Home"
         },
         {
             imgUrl: img7,
-            link: "https://www.facebook.com/icdt.org.ua/"
+            link: "https://www.facebook.com/icdt.org.ua/",
+            title:"Інститут травми розвитку дитини"
         },
         {
             imgUrl: img8,
-            link: "https://maximumfond.org.ua/"
+            link: "https://maximumfond.org.ua/",
+            title:"Міжнародний Благодійний Фонд Максимум"
         },
 
     ];
@@ -121,7 +129,7 @@ const PartnersSlider = () => {
 
     return (
         <div className={s.slider__wrap}>
-            <h2 className={s.title}>наші партнери</h2>
+            <h2 className={s.title} id="ourPartners">наші партнери</h2>
             <div className={s.slider__inner}>
                 <div className={s.slider}>
                     <div className={s.arrow}>
@@ -145,7 +153,7 @@ const PartnersSlider = () => {
                                     <div key={index} className={s.slider__card}>
                                         <div className={s.img__wrap}>
                                             <a href={item.link} target="_blank">
-                                                <img src={item.imgUrl} alt="" />
+                                                <img src={item.imgUrl} alt={item.title} />
                                             </a>
                                         </div>
                                     </div>

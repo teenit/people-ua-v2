@@ -18,9 +18,15 @@ const Footer = () => {
           
         </div>
         <div className={s.footer__links__wrap}>
-          <p><a href="#">Напрямки діяльності</a></p>
-          <p><a href="#">Про нас</a></p>
-          <p><a href="#">Стати партнером</a></p>
+          <p><a onClick={()=>{
+            document.getElementById("ourDirections").scrollIntoView({behavior:"smooth",block:"start"})
+          }}>Напрямки діяльності</a></p>
+          <p><a onClick={()=>{
+            document.getElementById("aboutUs").scrollIntoView({behavior:"smooth",block:"start"})
+          }}>Про нас</a></p>
+          <p><a onClick={()=>{
+            document.getElementById("ourPartners").scrollIntoView({behavior:"smooth",block:"start"})
+          }}>Наші партнери</a></p>
         </div>
         <div className={s.footer__buttons__wrap}>
           <div className={s.footer__phone__button}>

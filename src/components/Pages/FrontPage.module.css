@@ -203,7 +203,7 @@
     flex-direction: column;
     gap: 24px;
     padding: 12px;
-    min-height: 175px;
+    min-height: 200px;
     position: relative;
 }
 .directions__card__info h3, .directions__card__info p{

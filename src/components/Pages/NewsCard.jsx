@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import s from './FrontPage.module.css';
 import buttonArrow from '../../img/arrow-right-white.svg';
-import DirectionCardInfo from './NewsCardInfo';
+import NewsCardInfo from './NewsCardInfo';
 
-const DirectionsCard = ({ data }) => {
+const NewsCard = ({ data }) => {
   const [state, setState] = useState(false)
 
 
@@ -26,12 +26,12 @@ const DirectionsCard = ({ data }) => {
           </div>
 
       </div>
-      {state?<DirectionCardInfo data={data} close={()=>{setState(false)}}/>:null}
+      {state?<NewsCardInfo data={data} close={()=>{setState(false)}}/>:null}
     </div>
   );
 };
 
-export default DirectionsCard;
+export default NewsCard;
 
 
 
