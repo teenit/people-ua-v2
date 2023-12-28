@@ -40,6 +40,49 @@ const DonatForm = ({close}) => {
                     </div>
                 </div>
                 <div className={s.body}>
+                <DropElement 
+                        active={true}
+                        title={<><span><a href="https://send.monobank.ua/jar/9yixFpAKaA" target="_blank" rel="noopener noreferrer">На монобанку</a></span><img className={s.monoImg} src={monoImg} alt="Mono banka" />
+                        <img className={s.monoImg} src={monoLogoImg} alt="Mono bank дщпщ" /></>}
+                        children={<div>
+                            <div className={s.item}>
+                                <div className={s.item_title}>За посиланням</div>
+                                <div className={s.item_description}>
+                                    <a href="https://send.monobank.ua/jar/9yixFpAKaA" target="_blank" rel="noopener noreferrer">МОНОБАНКА</a>
+                                </div>
+                            </div>
+                                <div className={s.item}>
+                                <div className={s.item_title}>Номер картки банки</div>
+                                <div className={s.item_description} onClick={(e)=>{
+                                    navigator.clipboard.writeText(e.target.innerText)
+                                }}>5375 4112 1108 2388</div>
+                            </div>
+                            <div className={s.item}>
+                                <div className={s.item_title}>Призначення платежу</div>
+                                <div className={s.item_description} onClick={(e)=>{
+                                    navigator.clipboard.writeText(e.target.innerText)
+                                }}>Безповоротна грошова допомога</div>
+                            </div>
+                            </div>}
+                    />
+                    <DropElement 
+                        active={true}
+                        title={<><span>На картку Приватбанку</span><img className={s.monoImg} src={privatImg} alt="" /></>}
+                        children={<div>
+                            <div className={s.item}>
+                            <div className={s.item_title}>Номер картки</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>5169335100430582</div>
+                        </div>
+                        <div className={s.item}>
+                            <div className={s.item_title}>Призначення платежу</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}>Безповоротна грошова допомога</div>
+                        </div>
+                        </div>}
+                    />
                     <DropElement 
                         title={'На рахунок "ГО ЛЮДИ ЮЕЙ"'}
                         active={true}
@@ -83,47 +126,7 @@ const DonatForm = ({close}) => {
                         </div>
                         </div>}
                     />
-                    <DropElement 
-                        title={<><span>На карту Приват банку</span><img className={s.monoImg} src={privatImg} alt="" /></>}
-                        children={<div>
-                            <div className={s.item}>
-                            <div className={s.item_title}>Номер карти</div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>5169335100430582</div>
-                        </div>
-                        <div className={s.item}>
-                            <div className={s.item_title}>Призначення платежу</div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>Безповоротна грошова допомога</div>
-                        </div>
-                        </div>}
-                    />
-                    <DropElement 
-                        title={<><span>На моно банку</span><img className={s.monoImg} src={monoImg} alt="Mono banka" />
-                        <img className={s.monoImg} src={monoLogoImg} alt="Mono bank дщпщ" /></>}
-                        children={<div>
-                            <div className={s.item}>
-                                <div className={s.item_title}>За посиланням</div>
-                                <div className={s.item_description}>
-                                    <a href="https://send.monobank.ua/jar/9yixFpAKaA" target="_blank" rel="noopener noreferrer">МОНО БАНКА</a>
-                                </div>
-                            </div>
-                                <div className={s.item}>
-                                <div className={s.item_title}>Номер карти банки</div>
-                                <div className={s.item_description} onClick={(e)=>{
-                                    navigator.clipboard.writeText(e.target.innerText)
-                                }}>5375 4112 1108 2388</div>
-                            </div>
-                            <div className={s.item}>
-                                <div className={s.item_title}>Призначення платежу</div>
-                                <div className={s.item_description} onClick={(e)=>{
-                                    navigator.clipboard.writeText(e.target.innerText)
-                                }}>Безповоротна грошова допомога</div>
-                            </div>
-                            </div>}
-                    />
+                    
                     
                     {/* <div className={s.line}>
                         <div className={s.line_title}></div>

@@ -204,6 +204,7 @@
     gap: 24px;
     padding: 12px;
     min-height: 175px;
+    position: relative;
 }
 .directions__card__info h3, .directions__card__info p{
     margin: 0;
@@ -220,6 +221,15 @@
 .directions__card__panel p{
     max-width: 75%;
     font-family: 'Inter';
+}
+.directions__card__panel.active__description p{
+    max-width: 100%;
+}
+.directions__card__panel.active__description .directions__card__button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    transform: rotate(90deg);
 }
 .directions__card__img img{
     width: 100%;
@@ -378,7 +388,6 @@
 }
 .our__pictures__grid__picture__wrap img{
     width: 100%;
-    max-height: 250px;
     border-radius: var(--picture-border-radius);
 }
 

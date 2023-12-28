@@ -6,7 +6,6 @@ import DirectionCardInfo from './NewsCardInfo';
 const DirectionsCard = ({ data }) => {
   const [state, setState] = useState(false)
 
-
   return (
     <div className={s.directions__card__wrap}>
       <div className={s.directions__card__img}>
@@ -22,8 +21,11 @@ const DirectionsCard = ({ data }) => {
             }}>
               <img src={buttonArrow} alt="" />
             </button>
-          </div> : <div className={s.directions__card__panel}>
-            <p>{data.fullDescription}</p>
+          </div> : <div className={`${s.directions__card__panel} ${s.active__description}`}>
+            <p>
+              <b>Задача: </b>{data.task}<br />
+              <b>Як? </b>{data.yak}
+            </p>
             <button className={s.directions__card__button} onClick={() => {
               setState(!state)
             }}>
