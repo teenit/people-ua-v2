@@ -13,7 +13,7 @@ import NewsCard from './NewsCard'
 import TeamSlider from '../Sliders/TeamSlider/TeamSlider'
 import ValuesList from '../ValuesList/ValuesList'
 
-import valuesImg from '../../img/valueList/values.jpeg'
+import valuesImg from '../../img/valueList/values.jpg'
 import weWantToActImg from '../../img/valueList/weWantToAct.jpeg'
 import ourPrinciplesImg from '../../img/valueList/ourPrinciples.jpeg'
 
