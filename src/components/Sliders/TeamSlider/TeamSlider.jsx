@@ -4,7 +4,7 @@ import arrowLeft from '../../../img/slider-arrow-left.svg';
 import arrowRight from '../../../img/slider-arrow-right.svg';
 
 
-const TeamSlider = ({teamSliderData}) => {
+const TeamSlider = ({teamSliderData, addClass = ""}) => {
 
 
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -78,7 +78,7 @@ const TeamSlider = ({teamSliderData}) => {
     
 
     return (
-        <div className={s.slider__wrap}>
+        <div className={`${s.slider__wrap} ${addClass}`}>
             <h2 className={s.title}>{teamSliderData.title}</h2>
             <div className={s.slider__inner}>
                 <div className={s.slider}>
@@ -110,7 +110,7 @@ const TeamSlider = ({teamSliderData}) => {
                                             <img src={item.imgUrl} alt={item.name} />
                                         </div>
                                         <p className={s.bold}>{item.name}</p>
-                                        <p>{item.status}</p>
+                                        {item.status && <p>{item.status}</p>}    
                                     </div>
                                 );
                             })}

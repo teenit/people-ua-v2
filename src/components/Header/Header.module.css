@@ -30,9 +30,11 @@
     align-items: center;
     gap: 10px;
 }
-.header__phone__button span{
+.header__phone__button span, .header__phone__button a{
     font-family: 'Kyiv Region';
     max-height: 18px;
+    color: var(--blue);
+    text-decoration: none;
 }
 .header__icon__wrap{
     max-width: 24px;

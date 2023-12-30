@@ -152,7 +152,7 @@ const PartnersSlider = () => {
                                 return (
                                     <div key={index} className={s.slider__card}>
                                         <div className={s.img__wrap}>
-                                            <a href={item.link} target="_blank">
+                                            <a className={s.link__to__site} href={item.link} target="_blank">
                                                 <img src={item.imgUrl} alt={item.title} />
                                             </a>
                                         </div>

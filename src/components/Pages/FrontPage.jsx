@@ -454,7 +454,7 @@ const FrontPage = () => {
         <PartnersSlider />
 
         <ValuesList data={valueListsData.ourPrinciples} />
-        <TeamSlider teamSliderData={teamSliderData.volunteers} />
+        <TeamSlider teamSliderData={teamSliderData.volunteers} addClass={s.volunteers__slider} />
         <div className={s.directions__wrap}>
           <h2 className={s.title}>Наші новини</h2>
           <div className={s.news__cards__wrap}>

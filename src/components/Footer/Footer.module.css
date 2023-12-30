@@ -25,9 +25,6 @@
     cursor: pointer;
     color: #000;
 }
-.footer__wrap a:hover{
-    text-decoration: underline;
-}
 
 .footer__buttons__wrap {
     display: flex;
@@ -47,11 +44,12 @@
     gap: 10px;
 }
 
-.footer__phone__button span {
+.footer__phone__button span,.footer__phone__button a {
     font-family: 'Kyiv Region';
     max-height: 18px;
+    text-decoration: none;
+    color: var(--blue);
 }
-
 .footer__icon__wrap {
     max-width: 24px;
     max-height: 24px;
@@ -77,6 +75,10 @@
 
 .footer__links__wrap p {
     margin: 0;
+}
+.copyright a {
+    color: var(--blue);
+    
 }
 @media screen and (max-width:1000px){
     .footer__wrap{
