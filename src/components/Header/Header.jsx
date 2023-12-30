@@ -24,7 +24,9 @@ const Header = () => {
                <img src={phone} alt="" />
             </div>
            
-            <span>+380932080760</span>
+            <span onClick={(e)=>{
+              navigator.clipboard.writeText(e.target.value)
+            }}>+380932080760</span>
           </div>
           <button onClick={()=>{
             setDonat({...donate,openModal:true})

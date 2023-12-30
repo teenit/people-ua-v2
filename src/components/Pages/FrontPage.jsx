@@ -30,6 +30,12 @@ import teamSliderImg3 from '../../img/teamSlider/img3.png';
 import teamSliderImg4 from '../../img/teamSlider/img4.png';
 import teamSliderImg5 from '../../img/teamSlider/img5.png';
 
+import volunteerImg1 from  '../../img/volunteer/masha.png'
+import volunteerImg2 from  '../../img/volunteer/max.png'
+import volunteerImg3 from  '../../img/volunteer/sonya.png'
+import volunteerImg4 from  '../../img/volunteer/szhenya.png'
+import volunteerImg5 from  '../../img/volunteer/varya.png'
+
 import ourPicturesImg1 from '../../img/ourPictures/img1.png'
 import ourPicturesImg2 from '../../img/ourPictures/img2.png'
 import ourPicturesImg3 from '../../img/ourPictures/img3.png'
@@ -125,7 +131,7 @@ const FrontPage = () => {
   const newsData = [
     {
       imgUrl: newsImg7,
-      title: "Пост №1",
+      title: "Про волонтерів",
       description: "Школа волонтерів і святкування Дня волонтера 5 грудня",
       fullDescription: [{
         img:newsImg1,
@@ -139,7 +145,7 @@ const FrontPage = () => {
     },
     {
       imgUrl: newsImg8,
-      title: "Пост №2",
+      title: "Про маяк",
       description: "Ми повернулися в Маяк: провели курс 7 звичок, 2 літніх табори, 8 «хеппі деїв», 15 уроків робототехніки та загалом 120 різноманітних заходів і зустрічей",
       fullDescription: [{
         img:newsImg4,
@@ -152,7 +158,7 @@ const FrontPage = () => {
     ]    },
     {
       imgUrl: newsImg9,
-      title: "Пост №3",
+      title: "Про клуби",
       description: "Всі наші клуби ID та IT: підсумки нашої роботи з дітьми, підлітками, молоддю та батьками за останні 2 роки",
       fullDescription: [{
         img:newsImg6,
@@ -201,30 +207,26 @@ const FrontPage = () => {
       title: "наші волонтери",
       data: [
         {
-          imgUrl: teamSliderImg1,
-          name: 'Андрій Видрін',
-          status: 'Адміністратор ГО'
+          imgUrl: volunteerImg3,
+          name: 'Софія',
         },
         {
-          imgUrl: teamSliderImg2,
-          name: 'Дмитро Малашко',
-          status: 'Засновник'
+          imgUrl: volunteerImg2,
+          name: 'Макс',
         },
         {
-          imgUrl: teamSliderImg3,
-          name: 'Павло Мельников',
-          status: 'Засновник, директор'
+          imgUrl: volunteerImg1,
+          name: 'Марія',
         },
         {
-          imgUrl: teamSliderImg4,
-          name: 'Лілія Малашко',
-          status: 'Залучена спеціалістка, психологиня'
+          imgUrl: volunteerImg5,
+          name: 'Варя',
         },
         {
-          imgUrl: teamSliderImg5,
-          name: 'Данило Малашко',
-          status: 'Залучений спеціаліст, викладач'
+          imgUrl: volunteerImg4,
+          name: 'Євгенія',
         },
+
 
       ]
     },
@@ -421,7 +423,6 @@ const FrontPage = () => {
 
 
         <TeamSlider teamSliderData={teamSliderData.team} />
-        {/* <TeamSlider teamSliderData={teamSliderData.volunteers} /> */}
 
 
         <div className={s.our__pictures__wrap}>
@@ -453,6 +454,7 @@ const FrontPage = () => {
         <PartnersSlider />
 
         <ValuesList data={valueListsData.ourPrinciples} />
+        <TeamSlider teamSliderData={teamSliderData.volunteers} />
         <div className={s.directions__wrap}>
           <h2 className={s.title}>Наші новини</h2>
           <div className={s.news__cards__wrap}>
