@@ -8,12 +8,12 @@ import goal from '../../img/goal.svg'
 import visionImg from '../../img/vision.svg'
 import aboutUsPhoto from '../../img/about-us-photo.png'
 import aboutUsArrow from '../../img/read-more.svg'
-import DirectionsCard from './DirectionsCard'
+import DirectionsCardEN from './DirectionsCardEN'
 import NewsCard from './NewsCard'
 import TeamSlider from '../Sliders/TeamSlider/TeamSlider'
 import ValuesList from '../ValuesList/ValuesList'
 
-import valuesImg from '../../img/valueList/values.jpg'
+import valuesImg from '../../img/valueList/values.jpeg'
 import weWantToActImg from '../../img/valueList/weWantToAct.jpeg'
 import ourPrinciplesImg from '../../img/valueList/ourPrinciples.jpeg'
 
@@ -74,67 +74,67 @@ import img6 from '../../img/partnersSlider/img6.png'
 import img7 from '../../img/partnersSlider/img7.jpg'
 import img8 from '../../img/partnersSlider/img8.png'
 import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
-const FrontPage = () => {
+const FrontPageEN = () => {
   const valueListsData = {
     ourValues: {
       imgUrl: valuesImg,
-      title: "Наші цінності",
-      values: ["Свобода", "Гідність", "Справедливість", "Соціальна відповідальність"]
+      title: "OUR MAIN VALUES",
+      values: ["Freedom", "Dignity", "Justice", "Social responsibility"]
     },
     weWantToAct: {
       imgUrl: weWantToActImg,
-      title: "Ми прагнемо діяти",
-      values: ["Свідомо", "Цілісно", "Професійно", "Якісно", "На перспективу", "Через взаємовідносини", "Постійно комунікуючи", "Технологічно та сучасно"]
+      title: "WE AIM TO ACT",
+      values: ["Consciously", "Wholistically", "Professionally", "Effectively", "Perspectively", "Through relationships", "Constantly communicating", "Technologically and modernly"]
     },
     ourPrinciples: {
       imgUrl: ourPrinciplesImg,
-      title: "Наші принципи",
-      values: ["Діяти з любов’ю та турботою", "Приймаючи відмінності один одного", "Через повагу до людської гідності", "Як рівний рівному", "З гумором та доброю атмосферою", "В єдності"]
+      title: "OUR PRINCIPLES",
+      values: ["Act with love and care", "Respecting each other's differences", "Out of respect for human dignity", "As equal to equal", "With humor and good atmosphere", "In unity and cooperation"]
     },
   }
 
   const directionsData = [
     {
       imgUrl: directionsImg1,
-      title: "Надія для сиріт UA",
-      description: "Усі проєкти направлені на роботу з дітьми-сиротами, які знаходяться в інтернатних закладах, сім’ях опікунів, прийомних сім’ях або випустилися з них",
-      yak: "Через регулярні волонтерські поїздки в дитячі центри міста Києва та побудову дружніх відносин, наставництво, навчальні курси, майстер-класи, курси робототехніки, виїзди Happy Day, івенти і табори.",
-      task: "підтримати дитину-сироту, допомогти інтегруватися у суспільство через соціалізацію, профорієнтацію та освіту, а також знайти наставника та турботливу сім’ю задля подальшого розвитку.",
+      title: "Orphan`s Hope UA",
+      description: "We work with orphans who live in residential care, foster families or have graduated from institutions",
+      yak: "regular volunteer visits to children's centers in Kyiv and Kyiv region for building friendship, mentoring, training programs, master classes, robotics courses, Happy Day trips, summer camps and big events",
+      task: "support and help an orphan to integrate into society through socialization, career guidance and education, find a mentor and a caring family for further development",
     },
     {
       imgUrl: directionsImg2,
       title: "ID Club",
-      description: "Усі проєкти направлені на роботу з дітьми, підлітками та їх батьками - з сім’ями, які опинилися у кризовій ситуації через війну",
-      yak:"Через курс “7 звичок високоефективних підлітків”, курс “Q-club” (для підлітків 11-14 років), курс “Підготовка до успіху” (для підлітків 15-18 років), Групи надії для батьків, Книжковий клуб",
-      task:"підтримати сім’ю та допомогти їй вийти з кризової ситуації через оцінку потреб, складання особистого плану та розвитку. Допомогти дітям та підлітками зрозуміти, хто вони, здобути навички через різноманітні курси, підліткові клуби, а також стати більш сучасними та технологічними."
+      description: "We work with kids & teens, their parents & families who are at risk because of war",
+      yak:"systematic work with teens and their parents through the variety of courses, such as 7 Habits of Highly Effective Teens course by Stephen Covey, the Q-club course (for teens 11-14 years old), the Preparation for Success course (for teens 15-18 years old), groups of support for parents",
+      task:"support and help a family to prevent their crisis situation through our assessment of their needs, drawing up a personal plan and providing various social services for them. Also we help kids & teens with understanding themselves, their skills and their development through various courses, clubs and big events"
     },
     {
       imgUrl: directionsImg3,
       title: "IT Club",
-      description: "Усі проєкти направлені на роботу з дітьми, підлітками та молоддю, які прагнуть отримати розвинутий досвід володіння комп’ютером або бажають стати IT-спеціалістами та готові працювати для досягнення цієї мети",
-      yak:"Через навчання базовим комп’ютерним навичкам, програмуванню, веб-дизайну, анімації, робототехніці, віртуальній реальності та штучному інтелекту. ",
-      task:"надати учням необхідні в сучасному світі навички користування комп’ютером і гаджетами задля майбутнього легшого та швидшого працевлаштування, поглиблення в сучасні IT знання, а також інтеграції новітніх технологій в їх життя. "
+      description: "We work with teens & youth who want to learn basic computer skills or even become IT professionals",
+      yak:"comprehensive approach to learning basic computer skills for office work, programming, web design, animation, robotics, VR and AI through our own programs for teens",
+      task:" provide and improve IT skills to our students for their future professionalism and easier employment, as well as integrating the latest technologies into their lives"
     },
     {
       imgUrl: directionsImg4,
-      title: "Молодіжний центр ВПО",
-      description: "Усі проєкти направлені на роботу з внутрішньо-переміщеними студентами, викладачами та іншою молоддю ВПО",
-      yak:"Через підтримку студентів ВПО, залучення молоді в громадянське суспільство, школу волонтерів, коробки гум. допомоги в гумштабі ТНУ",
-      task:"підтримати внутрішньо переміщену молодь через особисті зустрічі та групи взаємодії, гуманітарну допомогу, просвітницьку діяльність та залучення до волонтерства. "
+      title: "IDP Youth Center",
+      description: "We work with internally displaced students, teachers and other displaced youth",
+      yak:"sustainable groups of support and humanitarian aid for IDP students and further involvement of youth in civil society through Volunteer School",
+      task:" support internally displaced youth through personal or group meetings, humanitarian aid, educational activities and involvement in volunteering"
     },
     {
       imgUrl: directionsImg5,
-      title: "Підтримка UA під час кризи",
-      description: "Усі проєкти направлені на психологічну підтримку сімей, дітей та молоді",
-      yak:"Через Ресурсний центр, Case Manager Pro, ТОВД - підхід, анкетування, індивідуальні та групові консультації, психологічну допомогу, Групи надії в кризовій ситуації, діагностування",
-      task:"допомогти вирішити проблеми психологічного характеру через оцінку потреб, зустрічі з психологом, групи підтримки, побудову дитячо-батьківських відносин, арт-терапію та інше. "
+      title: "Support UA in crisis",
+      description: "We provide diagnostics, psychological help and groups of support for families, children and youth",
+      yak:"permanent filing of the Resource Center, “Case Manager” program and use of TBRI - approach, questionnaires, diagnostics, individual and group consultations, psychological assistance, “Groups of Hope” in a crisis situation",
+      task:"help with psychological problems through needs assessment, meetings with a psychologist, supporting groups, building child-parent relationships and art therapy"
     },
     {
       imgUrl: directionsImg6,
-      title: "Коаліція “Київ без сиріт”",
-      description: "Усі проєкти направлені на спонукання партнерів до сумісної роботи задля досягнення спільних цілей у місті Києві",
-      yak:"Через конференції, спільні зустрічі та круглі столи, презентації, просвітницьку діяльність",
-      task:"залучити організації, вищі навчальні заклади, волонтерів та ресурсні сім’ї в сумісну роботу задля подолання сирітства в місті Києві."
+      title: "Coalition “Kyiv without orphans”",
+      description: "We find, inform, involve, equip and empower partners working together in unity to achieve common goals in Kyiv and region influencing orphans & at-risk kids, youth and families",
+      yak:"different conferences, meetings & round-table discussions, presentations and trainings, preparation of joint documents and statements",
+      task:"help NGOs, universities & colleges, churches, volunteers and resource families with collaborative practice to prevent and overcome orphanhood"
     },
   ]
   const newsData = [
@@ -182,58 +182,58 @@ const FrontPage = () => {
   ]
   const teamSliderData = {
     team: {
-      title: "наша команда",
+      title: "our team",
       data: [
         {
           imgUrl: teamSliderImg1,
-          name: 'Андрій Видрін',
-          status: 'Адміністратор ГО'
+          name: 'Andrii Vydrin',
+          status: 'Administrator of NGO'
         },
         {
           imgUrl: teamSliderImg2,
-          name: 'Дмитро Малашко',
-          status: 'Засновник'
+          name: 'Dmytro Malashko',
+          status: 'Founder'
         },
         {
           imgUrl: teamSliderImg3,
-          name: 'Павло Мельников',
-          status: 'Засновник, директор'
+          name: 'Pavlo Melnykov',
+          status: 'Founder, director'
         },
         {
           imgUrl: teamSliderImg4,
-          name: 'Лілія Малашко',
-          status: 'Залучена спеціалістка, психологиня'
+          name: 'Lilia Malashko',
+          status: 'Volunteer, psychologist'
         },
         {
           imgUrl: teamSliderImg5,
-          name: 'Данило Малашко',
-          status: 'Залучений спеціаліст, викладач'
+          name: 'Danylo Malashko',
+          status: 'Volunteer'
         },
 
       ]
     },
     volunteers: {
-      title: "наші волонтери",
+      title: "OUR VOLUNTEERS ",
       data: [
         {
           imgUrl: volunteerImg3,
-          name: 'Софія',
+          name: 'Sonya',
         },
         {
           imgUrl: volunteerImg2,
-          name: 'Макс',
+          name: 'Max',
         },
         {
           imgUrl: volunteerImg1,
-          name: 'Марія',
+          name: 'Maria',
         },
         {
           imgUrl: volunteerImg5,
-          name: 'Варя',
+          name: 'Varya',
         },
         {
           imgUrl: volunteerImg4,
-          name: 'Євгенія',
+          name: 'Eugenia',
         },
 
 
@@ -256,34 +256,34 @@ const FrontPage = () => {
       {
           imgUrl: img1,
           link:"https://ukrainabezsyrit.org/",
-          title:"Україна без сиріт"
+          title:"The Alliance for “Ukraine Without Orphans”"
       },
       {
           imgUrl: img2,
           link:"https://ccx.org.ua/",
-          title:"ССХ Україна"
+          title:"IFES"
       },
   
       {
           imgUrl: img3,
           link:"https://tnu.edu.ua/",
-          title:"ТНУ"
+          title:"TNU/EUNU"
       },
   
       {
           imgUrl: img5,
           link: "https://www.facebook.com/HappyHomeUkraine/",
-          title:"Happy Home"
+          title:"Happy Home Center"
       },
       {
           imgUrl: img7,
           link: "https://www.facebook.com/icdt.org.ua/",
-          title:"Інститут травми розвитку дитини"
+          title:"Institute Of Child Developmental Trauma"
       },
       {
           imgUrl: img8,
           link: "https://maximumfond.org.ua/",
-          title:"Мінжародний благодійний фонд МАКСИМУМ"
+          title:"Charity fund “MAXIMUM”, Dnipro"
       },
   
   ]
@@ -294,7 +294,7 @@ const FrontPage = () => {
     mission: true,
     goals: true
   })
-  const aboutUsText = "В центрі нашої роботи знаходяться постійні взаємовідносини та довгострокові взаємодії за окремими кейсами дітей, сімей та молоді, а також групами підтримки і розвитку. Кінцевою задачею нашої організації є свідомість, незалежність, якість та відповідальність людей, з якими ми працюємо. Чи то сім’я СЖО або ВПО, чи то дитина-сирота або випускник інтернату -  ми даємо можливість кожному отримувати підтримку та допомогу, розвиватися та опановувати нові навички, брати участь в проєктах ГО і громадянському суспільстві загалом, а також ставати самодостатніми завдяки нашим співробітникам, волонтерам і партнерам. Наша основна задача - підтримати людину у складний період та допомогти їй вийти із нього спроможною та розвинутою. Також ми намагаємося ділитися європейськими цінностями і принципами, але й не забуваємо про наше українське коріння."
+  const aboutUsText = "The core of our social work is permanent relationships and long-term interactions with individual cases of children, youth and families as well as holding the groups of support and development. We see the result of our work in consciousness & self-reliance, safety & well-being of people we work with. Whether it is an at-risk family, a kid, an orphan, an orphanage graduate, a disabled person or an internally displaced student - we give everyone the opportunity to receive support and help, develop and master new skills, participate in our projects, and also become self-sufficient thanks to our employees, volunteers and partners. We want to support a person in a difficult period of life and help him/her to get out of it by being capable and developed. We share European & Cristian values and principles and do not forget our Ukrainian roots."
   const [readMore, setReadMore] = useState(false)
   const [showAllPhotos, setShowAllPhotos] = useState(false)
   const [ourPicturesState, setOurPicturesState] = useState(ourPicturesData.slice(0,9))
@@ -305,14 +305,11 @@ const FrontPage = () => {
           <div className={s.first__screen__inner}>
             <div className={s.first__screen__info__wrap}>
               <div className={s.first__screen__info__inner}>
-                <p style={{ fontSize: "24px", fontFamily: "Kyiv Region" }}>ГРОМАДСЬКА<br />
-                  ОРГАНІЗАЦІЯ<br />
-                  ЛЮДИ ЮЕЙ<br />
-                  місто Київ
+                <p style={{ fontSize: "24px", fontFamily: "Kyiv Region" }}>NGO PEOPLE UA, KYIV<br />
                 </p>
                 <div>
-                  <p className={s.big__size}>Закладаємо фундамент нового українського суспільства</p>
-                  <p className={s.middle__size}>Використовуючи систематичний, комплексний та індивідуальний підхід до допомоги, підтримки і розвитку дітей, сімей та молоді в громадах</p>
+                  <p className={s.big__size}>We build the foundation of a new Ukrainian society (after war)</p>
+                  <p className={s.middle__size}>Using a systematic, comprehensive and individual approach to help, support and develop children, parents/families and youth in local communities</p>
                 </div>
               </div>
             </div>
@@ -330,8 +327,10 @@ const FrontPage = () => {
                 // setVision({ ...vision, vision: !vision.vision, mission: vision.mission, goals: vision.goals })
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
-                  <p className={s.title__vision}>наше бачення</p>
-                  <p>Діти зростають в турботливих сім'ях, навчаються бути розвинутою молоддю і свідомо долучаються до формування нового українського суспільства</p>
+                  <p className={s.title__vision}>Our Vision</p>
+                  <p>Children grow up in caring families, learn how to develop their personalities through education, socialization & career guidance and participate in Ukrainian society.
+                  Caring families and other people raise children, develop their personalities and involve them in participation in Ukrainian society.
+                  </p>
                   {/* <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
                   </div> */}
@@ -347,7 +346,7 @@ const FrontPage = () => {
                       <img src={visionImg} alt="" />
                     </div>
 
-                    <p>наше бачення</p>
+                    <p>Our Vision</p>
                   </div>
 
                   {/* <div className={s.vision__arrow__wrap}>
@@ -362,8 +361,8 @@ const FrontPage = () => {
                 // setVision({ ...vision, vision: vision.vision, mission: !vision.mission, goals: vision.goals })
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
-                  <p className={s.title__vision}>наша місія</p>
-                  <p>Залучення волонтерів, професіоналів, наставників, спроможних сімей та партнерів задля впливу на дітей, молодь, батьків та суспільство в цілому
+                  <p className={s.title__vision}>Our mission</p>
+                  <p>Engaging/involvement volunteers, professionals, mentors, capable families and partners, (churches) to impact children, youth, parents and whole society (to help, support and influence society)
                   </p>
                   {/* <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
@@ -380,7 +379,7 @@ const FrontPage = () => {
                     <div className={s.vision__img__wrap}>
                       <img src={rocket} alt="" />
                     </div>
-                    <p>наша місія</p>
+                    <p>Our mission</p>
                   </div>
                   {/* <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
@@ -397,12 +396,12 @@ const FrontPage = () => {
               // setVision({ ...vision, vision: vision.vision, mission: vision.mission, goals: !vision.goals })
             }}>
               <div className={`${s.vision__card__content} ${s.vision__desc}`}>
-                <p className={s.title__vision}>наші цілі</p>
+                <p className={s.title__vision}>Our goals</p>
                 <ul>
-                  <li>Сприяння тому, щоб усі діти жили у турботливих родинах</li>
-                  <li>Надання допомоги, підтримки та захисту прав дітей, сімей та молоді</li>
-                  <li>Заохочення їх до всебічного розвитку та участі в громадянському суспільстві</li>
-                  <li>Поширення серед них українських і сімейних цінностей, духовності та здорового способу життя</li>
+                  <li>Help children live in caring families</li>
+                  <li>Provide assistance, support and protection of childrens` rights, families and young people</li>
+                  <li>Encourage them for wholistic development and participation in civil society</li>
+                  <li>Inform them about Ukrainian and family values, spirituality and healthy lifestyle</li>
                 </ul>
 
                 {/* <div className={s.vision__arrow__wrap}>
@@ -419,7 +418,7 @@ const FrontPage = () => {
                   <div className={s.vision__img__wrap}>
                     <img src={goal} alt="" />
                   </div>
-                  <p>наші цілі</p>
+                  <p>Our goals</p>
                 </div>
                 <div className={s.vision__arrow__wrap}>
                   <img src={visionArrow} alt="" />
@@ -435,11 +434,11 @@ const FrontPage = () => {
 
 
         <div className={s.directions__wrap}>
-          <h2 className={s.title} id='ourDirections' >Основні напрями нашої діяльності</h2>
+          <h2 className={s.title} id='ourDirections' >MAIN DIRECTIONS OF OUR ACTIVITIES</h2>
           <div className={s.directions__cards__wrap}>
             {directionsData.map((item, index) => {
               return (
-                <DirectionsCard key={index} data={item} />
+                <DirectionsCardEN key={index} data={item} />
 
               )
             })}
@@ -460,7 +459,7 @@ const FrontPage = () => {
 
         <div className={s.about__us__wrap}>
           <div className={s.about__us__info}>
-            <h2 className={s.title}>Про нас</h2>
+            <h2 className={s.title}>ABOUT US</h2>
             <p>{readMore || window.innerWidth >= 1000 ? aboutUsText : aboutUsText.slice(0, 400) + '...'}</p>
             {window.innerWidth < 1000 && (<div className={`${s.about__us__img__wrap} ${readMore && (s.about__us__img__wrap__rotated)}`} style={{ cursor: 'pointer' }}>
               <img src={aboutUsArrow} alt="" onClick={() => {
@@ -471,7 +470,7 @@ const FrontPage = () => {
           </div>
 
           <div className={s.about__us__img__wrap}>
-            <img src={aboutUsPhoto} alt="Про нас" id='aboutUs'/>
+            <img src={aboutUsPhoto} alt="ABOUT US" id='aboutUs'/>
           </div>
         </div>
 
@@ -482,7 +481,7 @@ const FrontPage = () => {
 
 
         <div className={s.our__pictures__wrap}>
-          <h2 className={s.title} id='our__pictures__title'>наші світлини</h2>
+          <h2 className={s.title} id='our__pictures__title'>our pictures</h2>
           <div className={s.our__pictures__inner}>
             <div className={s.our__pictures__grid}>
               {ourPicturesState.map((item, index) => {
@@ -503,16 +502,16 @@ const FrontPage = () => {
               if (showAllPhotos) {
                 document.getElementById("our__pictures__title").scrollIntoView({ block: 'start', behavior: 'smooth' })
               }
-            }}>{showAllPhotos ? "Згорнути" : "Детальніше"}</button>
+            }}>{showAllPhotos ? "Close" : "Show"}</button>
           </div>
         </div>
 
         <PartnersSlider partnersSliderData={partnersSliderData}/>
 
         <ValuesList data={valueListsData.ourPrinciples} />
-        <TeamSlider teamSliderData={teamSliderData.volunteers} addClass={s.volunteers__slider} />
+        <TeamSlider teamSliderData={teamSliderData.volunteers} />
         <div className={s.directions__wrap}>
-          <h2 className={s.title}>Наші новини</h2>
+          <h2 className={s.title}>Our news</h2>
           <div className={s.news__cards__wrap}>
             {newsData.map((item, index) => {
               return (
@@ -529,4 +528,4 @@ const FrontPage = () => {
   )
 }
 
-export default FrontPage
+export default FrontPageEN

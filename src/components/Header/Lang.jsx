@@ -1,6 +1,7 @@
 import React from 'react'
 import s from './Header.module.css'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Lang = () => {
     const [lang,setLang] = useState({
@@ -10,17 +11,17 @@ const Lang = () => {
     })
     return (
         <div className={s.lang__wrap}>
-            <span className={lang.ua?s.active:null} onClick={()=>{
+            <NavLink to={"/"} className={lang.ua?s.active:s.lang__span} onClick={()=>{
                 setLang({...lang,ua:!lang.ua,en:false,de:false})
-            }}>ua</span>
+            }}>ua</NavLink>
             <div className={s.lang__line}></div>
-            <span className={lang.en?s.active:null} onClick={()=>{
+            <NavLink to={"/en"} className={lang.en?s.active:s.lang__span} onClick={()=>{
                 setLang({...lang,ua:false,en:!lang.eng,de:false})
-            }}>en</span>
-            <div className={s.lang__line}></div>
+            }}>en</NavLink>
+            {/* <div className={s.lang__line}></div>
             <span className={lang.de?s.active:null} onClick={()=>{
                 setLang({...lang,ua:false,en:false,de:!lang.de})
-            }}>de</span>
+            }}>de</span> */}
         </div>
     )
 }
