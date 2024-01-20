@@ -299,7 +299,7 @@ const FrontPageEN = () => {
   const [showAllPhotos, setShowAllPhotos] = useState(false)
   const [ourPicturesState, setOurPicturesState] = useState(ourPicturesData.slice(0,9))
   return (
-    <div className={s.wrap}>
+    <div className={`${s.wrap} eng`}>
       <div className={s.inner}>
         <div className={s.first__screen__wrap}>
           <div className={s.first__screen__inner}>
@@ -308,7 +308,7 @@ const FrontPageEN = () => {
                 <p style={{ fontSize: "24px", fontFamily: "Kyiv Region" }}>NGO PEOPLE UA, KYIV<br />
                 </p>
                 <div>
-                  <p className={s.big__size}>We build the foundation of a new Ukrainian society (after war)</p>
+                  <p className={s.big__size}>We build the foundation of a new postwar Ukrainian society together with partners </p>
                   <p className={s.middle__size}>Using a systematic, comprehensive and individual approach to help, support and develop children, parents/families and youth in local communities</p>
                 </div>
               </div>

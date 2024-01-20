@@ -399,7 +399,7 @@
 }
 @media screen and (max-width:600px){
 .big__size{
-    font-size: 30px;
+    font-size: 28px;
 }
 .our__pictures__grid{
     grid-template-columns: none;
