@@ -3,7 +3,7 @@ import s from './FrontPage.module.css';
 import buttonArrow from '../../img/arrow-right-white.svg';
 import NewsCardInfo from './NewsCardInfo';
 
-const NewsCard = ({ data }) => {
+const NewsCard = ({ data, lang = "ua" }) => {
   const [state, setState] = useState(false)
 
 
@@ -20,7 +20,7 @@ const NewsCard = ({ data }) => {
             <button className={s.news__card__button} onClick={() => {
               setState(!state)
             }}>
-              <span>Читати далі</span>
+              <span>{lang == "en" ? "Read more" : "Читати далі"}</span>
               <img src={buttonArrow} alt="" />
             </button>
           </div>

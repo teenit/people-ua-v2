@@ -140,42 +140,50 @@ const FrontPageEN = () => {
   const newsData = [
     {
       imgUrl: newsImg7,
-      title: "Про волонтерів",
-      description: "Школа волонтерів і святкування Дня волонтера 5 грудня",
+      title: "About our volunteers",
+      description: "Volunteer school and celebration of Volunteer Day on December, the 5th 2023",
       fullDescription: [{
         img:newsImg1,
-        text:"Грудень 2023 - місяць підбиття підсумків та вираження подяки тим, хто був з нами та допомагав протягом всього цього року, а деякі навіть останніх двох важких років. Тому 5 грудня, на Міжнародний День Волонтера, ГО ЛЮДИ ЮЕЙ за підтримки Української Волонтерської Служби та Дитячого фонду ООН (ЮНІСЕФ) в Україні, провели п'яту підсумовуючу зустріч, на яку було запрошено 16 людей в рамках нашої Школи Волонтерів. На цій зустріч ми святково вшанували діяльність волонтерів і нагородили їх грамотами та подарунками."
+        text:"December is a month of summing up and expressing gratitude to those who have been with us and helped during this difficult year and 2022. Therefore, on December the 5th 2023, on the International Day of Volunteers, NGO PEOPLE UA, with the support of the Ukrainian Volunteer Service and UNICEF in Ukraine, held the fifth summarizing meeting, where 16 people were invited as part of our Volunteer School. At this meeting we celebrated and honored the activities of our volunteers and awarded them certificates and gifts. It is great that our volunteers know practically how to help children and families and still want to learn how to do it professionally, focused and systematically. These features are the real markers of permanent volunteers."
       },
       {
         img:newsImg2,
-        text:"Дуже класно, що наші волонтери вміють не тільки допомагати дітям і сім’ям, але й навчатися тому, як це робити якісно, сфокусовано та систематично. Саме ці риси відрізняють справжніх постійних волонтерів, завдяки яким було проведено біля 400 різних якісних розвивальних, підтримуючих, розважальних, а в певних випадках і з видачею гуманітарної допомоги, зустрічей та заходів. Цими заходами ми змогли допомогти біля 200 людей нашої цільової аудиторії на регулярній основі протягом року. А ще провели інтерактивний міні-тренінг з антивигорання, де залучений спеціаліст поділився цінними порадами та техніками самодопомоги. Це було надзвичайно корисно для кожного, хто присвячує себе допомозі іншим з можливістю використовувати ці навички в повсякденному житті. Також на заході був смачний стіл та дружня атмосфера. Ми щиро дякуємо кожному, хто долучився до цього заходу та підтримує наші зусилля. Ви робите величезну справу, допомагаючи та вносячи позитивні зміни в життя інших. До зустрічі на наступних заходах у новому 2024 році."
+        text:`Thanks to them we held about 400 different educational, supportive, entertaining and in some cases with humanitarian aid meetings and events. With these events we were able to help about 200 kids & teens and their families on a regular basis during the year.
+        We also held an interactive mini-training on burnout prevention where our psychologist shared valuable tips and self-help techniques. It was really useful for us and can be useful for those who help others in such difficult times.
+        There was also tasty food and a friendly atmosphere at the event thanks to our partners.
+        We sincerely thank everyone who participated in this event and supports our efforts. You are doing a great job helping and making a positive difference in the lives of others.
+        See you at the next events in the new year 2024.`
+        
       }
     ]
     },
     {
       imgUrl: newsImg8,
-      title: "Про маяк",
-      description: "Ми повернулися в Маяк: провели курс 7 звичок, 2 літніх табори, 8 «хеппі деїв», 15 уроків робототехніки та загалом 120 різноманітних заходів і зустрічей",
+      title: "About Mayak center",
+      description: "We are back at Mayak with “7 Habits of Highly Effective Teens” course by Stephen Covey, 2 summer camps, 12 “Happy Days”, 15 robotics lessons and 120 different events and meetings totally since spring 2023",
       fullDescription: [{
         img:newsImg4,
-        text:"Протягом 2023 року ГО ЛЮДИ ЮЕЙ багато працювала в Центрі соціально-психологічної реабілітації дітей №1 (Маяк) на Троєщині. За цей час силами більше 20 волонтерів було проведено близько 120 зустрічей для 100 дітей та підлітків. Під час цих зустрічей нами було проведено оцінку потреб, курси «7 звичок високоефективних підлітків» та «Уроки самостійності», 2 літніх табори, а також 12 поїздок в рамках проєкту з мотивації, соціалізації та нагородження дітей «Happy Day» (в McDonald`s, KFC та інші цікаві місця). Перед кожним заняттям ми проводимо футбольний матч і різноманітні інтерактиви на свіжому повітрі, аби на заняттях діти були бадьорими та веселими в такий складний час."
+        text:`During 2023, we worked a lot at the Center for Social and Psychological Rehabilitation for Children No. 1 (Mayak) in Troyeschina district of Kyiv. During this time, more than 20 volunteers held about 120 meetings for 100 children and teenagers. At these meetings, we conducted an assessment of their needs, courses "7 Habits of Highly Effective Teenagers" & "Lessons of Self-sufficiency", 2 fests, as well as 12 trips within the project “Happy Day” for motivating, socializing and rewarding children (at McDonald's , KFC and other interesting places).
+        Before each lesson we play soccer with them and do various interactive activities and games in the fresh air for kids, so that they have a good mood during such a difficult time.`
       },
       {
         img:newsImg3,
-        text:"Також з вересня цього року ми, разом з нашими партнерами, запровадили уроки з робототехніки і на сьогоднішній день провели вже 15 зустрічей. Дітлахи навчилися збирати та програмувати різноманітних роботів. Це дуже сучасно та круто! За цей час з Маяка випустилися 15 хлопців і дівчат, а також 13 - повернулися до біологічних або прийомних сімей. У деяких дітей з’явилися наставники та постійні волонтери. З 2024 року ми будемо впроваджувати підхід Терапії, основаній на взаємовідносинах довіри, а зараз, наприкінці грудня, провели дуже круту підсумовуючи зустріч з конкурсами, танцями та подарунками для всіх дітей та вихователів центру. Цей рік для нас і наших підопічних був дуже насиченим і корисним!"
+        text:`Also, this September, we have introduced robotics lessons together with our partners and have held 15 meetings . The children learned to assemble and program various kinds of robots. It's very modern and interesting for them.
+        During this time, 15 boys and girls graduated from Mayak center, and 13 more went back to biological families or were adopted. Some teens have mentors and permanent volunteers visiting them every week. Also teens and kids go to church every weekend. 
+        At the end of December we held a Christmas and New Year fests with games, dances and gifts for all the children and caregivers of the center. We plan to implement the approach of Trust-Based Relational Intervention next year and this year already was very deep and useful for all of us!`
       }
     ]    },
     {
       imgUrl: newsImg9,
-      title: "Про клуби",
-      description: "Всі наші клуби ID та IT: підсумки нашої роботи з дітьми, підлітками, молоддю та батьками за останні 2 роки",
+      title: "About our clubs",
+      description: "Our ID and IT clubs have great results of our constant work with kids & teens, youth & parents over the past 2 years",
       fullDescription: [{
         img:newsImg6,
-        text:"На початку повномасштабної війни ми допомогли великій кількості людей, з якими вже минулої весни, започаткували різні клуби та групи підтримки для дітей, підлітків, молоді та їх батьків. За цей час було проведено близько 200 занять з IT, а саме базових комп’ютерних навичок, програмування, веб-дизайну та анімації, а також близько 250  зустрічей з ID, а саме курси “7 звичок високоефективних підлітків”, “Підготовка до успіху, “Q club” (розвиток різних типів інтелекту), групи надії для батьків та групи підтримки для студентів ВПО."
+        text: `At the beginning of the full-scale war, we helped a large number of people, with whom we started various clubs and support groups for children, teenagers, young people and their parents. During this time about 200 IT classes were held (basic computer skills, programming, web design and animation) as well as about 250 ID meetings ("7 Habits of Highly Effective Teenagers" course, "Preparation for Success” training course and “Q clubs” - development of different types of intelligence, “Groups of Hope” for parents and IDP students).`
       },
       {
         img:newsImg5,
-        text:"Також ми провели багато інших івентів, літніх таборів та пікніків, на яких продовжуємо вибудовувати дружні відносини та постійну комунікацію з дітьми, підлітками, молоддю та їх батьками, надаючи комплексну та систематичну підтримку їх сім’ям. Вони вдячні нам за розвиток, а ми їм - за зусилля. Маємо надію, що в наступному 2024 році, ми продовжимо вкладатися в нове покоління українських дітей. Разом - ми сила!"
+        text:`We also held many other events, summer camps and picnics where we continue to build friendly relations and constant communication with kids & teens, youth & parents, providing comprehensive and systematic support and help to their families. They are grateful to us for their development, and we are grateful to them for their efforts. We hope that in 2024 we will continue to invest in a new generation of Ukrainian children and youth. Together we are stronger.`
       }
     ]
     },
@@ -515,7 +523,7 @@ const FrontPageEN = () => {
           <div className={s.news__cards__wrap}>
             {newsData.map((item, index) => {
               return (
-                <NewsCard key={index} data={item} />
+                <NewsCard key={index} lang='en' data={item} />
 
               )
             })}

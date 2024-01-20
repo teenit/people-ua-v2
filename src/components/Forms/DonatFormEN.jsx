@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import s from './DonatForm.module.css';
 import arrowImg from './../../img/read-more.svg';
-import monoImg from './../../img/uah_50.png'
+import qrCodeImg from './../../img/QR-code-paypal.png'
 import privatImg from './../../img/privatbank-r0-square_medium.jpg'
 import monoLogoImg from './../../img/monobank.jpg'
 import paypal from './../../img/paypal.png'
@@ -75,19 +75,19 @@ const DonatForm = ({close}) => {
                     />
                     <DropElement 
                         active={true}
-                        title={<><span>PayPal</span><img className={s.monoImg} src={paypal} alt="" /></>}
-                        children={<div>
+                        title={<><a href="https://www.paypal.com/donate/?hosted_button_id=AQUH5TV8FZ3BC"><span>PayPal</span></a><img className={s.monoImg} src={paypal} alt="" /></>}
+                        children={<div className={s.grid}>
                             <div className={s.item}>
-                            <div className={s.item_title}>Номер картки</div>
+                            <div className={s.item_title}>PayPal link</div>
                             <div className={s.item_description} onClick={(e)=>{
                                 navigator.clipboard.writeText(e.target.innerText)
-                            }}>5169335100430582</div>
+                            }}><a className={s.paypal_link} href="https://www.paypal.com/donate/?hosted_button_id=AQUH5TV8FZ3BC">Support us</a></div>
                         </div>
                         <div className={s.item}>
-                            <div className={s.item_title}>Призначення платежу</div>
+                            <div className={s.item_title}>PayPal QR-code</div>
                             <div className={s.item_description} onClick={(e)=>{
                                 navigator.clipboard.writeText(e.target.innerText)
-                            }}>Безповоротна грошова допомога</div>
+                            }}><img src={qrCodeImg} alt="PayPal QR-code" /></div>
                         </div>
                         </div>}
                     />

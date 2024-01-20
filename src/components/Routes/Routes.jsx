@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import HeaderEN from '../Header/HeaderEN';
 import Footer from '../Footer/Footer';
 import FooterEN from '../Footer/FooterEN';
+import CompliteDonationPage from '../Pages/CompliteDonationPage';
 
 const AppRoutes = () => {
     return (
@@ -18,6 +19,11 @@ const AppRoutes = () => {
             <Route path='/en' element={<>
                 <HeaderEN />
                 <FrontPageEN />
+                <FooterEN />
+            </>} />
+            <Route path='/en/completed' element={<>
+                <HeaderEN />
+                <CompliteDonationPage />
                 <FooterEN />
             </>} />
         </Routes>

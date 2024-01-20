@@ -155,7 +155,23 @@
     color: #000;
     
 }
+.paypal_link {
+    display: block;
+    text-decoration: none;
+    color: var(--blue);
+    background-color: var(--yellow);
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
 @media screen and (max-width:600px) {
+    .form {
+        max-width: 80vw;
+    }
     .item {
         display: grid;
         grid-template-columns: 1fr;
