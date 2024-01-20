@@ -4,6 +4,8 @@ import arrowImg from './../../img/read-more.svg';
 import monoImg from './../../img/uah_50.png'
 import privatImg from './../../img/privatbank-r0-square_medium.jpg'
 import monoLogoImg from './../../img/monobank.jpg'
+import paypal from './../../img/paypal.png'
+import swift from './../../img/swift.png'
 
 const DropElement = ({children, title, active = false}) => {
     const [state, setState] = useState({
@@ -42,32 +44,38 @@ const DonatForm = ({close}) => {
                 <div className={s.body}>
                 <DropElement 
                         active={true}
-                        title={<><span><a href="https://send.monobank.ua/jar/9yixFpAKaA" target="_blank" rel="noopener noreferrer">На монобанку</a></span><img className={s.monoImg} src={monoImg} alt="Mono banka" />
-                        <img className={s.monoImg} src={monoLogoImg} alt="Mono bank дщпщ" /></>}
+                        title={<><span>SWIFT</span>
+                        <img className={s.monoImg} src={swift} alt="Swift" /></>}
                         children={<div>
-                            <div className={s.item}>
-                                <div className={s.item_title}>За посиланням</div>
-                                <div className={s.item_description}>
-                                    <a href="https://send.monobank.ua/jar/9yixFpAKaA" target="_blank" rel="noopener noreferrer">МОНОБАНКА</a>
-                                </div>
-                            </div>
                                 <div className={s.item}>
-                                <div className={s.item_title}>Номер картки банки</div>
+                                <div className={s.item_title}>IBAN</div>
                                 <div className={s.item_description} onClick={(e)=>{
                                     navigator.clipboard.writeText(e.target.innerText)
-                                }}>5375 4112 1108 2388</div>
+                                }}>UA903220010000026201304562617</div>
                             </div>
                             <div className={s.item}>
-                                <div className={s.item_title}>Призначення платежу</div>
+                                <div className={s.item_title}>SWIFT/BIC code</div>
                                 <div className={s.item_description} onClick={(e)=>{
                                     navigator.clipboard.writeText(e.target.innerText)
-                                }}>Безповоротна грошова допомога</div>
+                                }}>UNJSUAUKXXX</div>
+                            </div>
+                            <div className={s.item}>
+                                <div className={s.item_title}>Receiver</div>
+                                <div className={s.item_description} onClick={(e)=>{
+                                    navigator.clipboard.writeText(e.target.innerText)
+                                }}>MELNYKOV PAVLO</div>
+                            </div>
+                            <div className={s.item}>
+                                <div className={s.item_title}>Address</div>
+                                <div className={s.item_description} onClick={(e)=>{
+                                    navigator.clipboard.writeText(e.target.innerText)
+                                }}>01001, Ukraine, c. Kyiv, st. Pavla Tychyny, build. 10, fl. 91</div>
                             </div>
                             </div>}
                     />
                     <DropElement 
                         active={true}
-                        title={<><span>На картку Приватбанку</span><img className={s.monoImg} src={privatImg} alt="" /></>}
+                        title={<><span>PayPal</span><img className={s.monoImg} src={paypal} alt="" /></>}
                         children={<div>
                             <div className={s.item}>
                             <div className={s.item_title}>Номер картки</div>
@@ -75,49 +83,6 @@ const DonatForm = ({close}) => {
                                 navigator.clipboard.writeText(e.target.innerText)
                             }}>5169335100430582</div>
                         </div>
-                        <div className={s.item}>
-                            <div className={s.item_title}>Призначення платежу</div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>Безповоротна грошова допомога</div>
-                        </div>
-                        </div>}
-                    />
-                    <DropElement 
-                        title={'На рахунок "ГО ЛЮДИ ЮЕЙ"'}
-                        active={true}
-                        children={<div className="children__elements">
-                            <div className={s.item}>
-                            <div className={s.item_title}>Найменування організації:</div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>ЛЮДИ ЮЕЙ ГО</div>
-                        </div>
-                        <div className={s.item}>
-                            <div className={s.item_title}>Код отримувача:</div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>44814017</div>
-                        </div>
-                        <div className={s.item}>
-                            <div className={s.item_title}>Назва банку:</div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>АТ КБ "ПРИВАТБАНК"</div>
-                        </div>
-                        <div className={s.item}>
-                            <div className={s.item_title}>Рахунок отримувача у форматі IBAN: </div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>UA323052990000026006030125781</div>
-                        </div>
-                        <div className={s.item}>
-                            <div className={s.item_title}>Валюта:  </div>
-                            <div className={s.item_description} onClick={(e)=>{
-                                navigator.clipboard.writeText(e.target.innerText)
-                            }}>UAH</div>
-                        </div>
-                
                         <div className={s.item}>
                             <div className={s.item_title}>Призначення платежу</div>
                             <div className={s.item_description} onClick={(e)=>{

@@ -84,7 +84,7 @@ const FrontPageEN = () => {
     weWantToAct: {
       imgUrl: weWantToActImg,
       title: "WE AIM TO ACT",
-      values: ["Consciously", "Wholistically", "Professionally", "Effectively", "Perspectively", "Through relationships", "Constantly communicating", "Technologically and modernly"]
+      values: ["Consciously", "Wholistically", "Professionally", "Effectively", "Through relationships", "Constantly communicating", "Technologically and modernly","Perspectively"]
     },
     ourPrinciples: {
       imgUrl: ourPrinciplesImg,
