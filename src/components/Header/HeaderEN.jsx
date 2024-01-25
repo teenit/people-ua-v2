@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import s from './Header.module.css'
 import logo from '../../img/logo.svg'
 import phone from '../../img/phone.svg'
-import Lang from './Lang'
+import LangEN from './LangEN'
 import BurgerMenu from '../BurgerMenu/BurgerMenu'
 import PortalModalRoot from '../Portals/PortalModalRoot'
 import DonatFormEN from '../Forms/DonatFormEN'
@@ -18,7 +18,7 @@ const Header = () => {
             <a href="#"><img src={logo} alt="Logo" /></a>
           </div>
         <div className={s.header__panel}>
-          <Lang/>
+          <LangEN/>
           <div className={s.header__phone__button}>
             <div className={s.header__icon__wrap}>
                <img src={phone} alt="" />

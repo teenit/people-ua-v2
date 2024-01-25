@@ -49,7 +49,8 @@ width: 100%;
     cursor: pointer;
 }
 .dot:hover{
-    transform: scale(1.25);
+    /* transform: scale(1.25); */
+    background-color: var(--blue);
     transition: all .3s;
 }
 .dot__active{

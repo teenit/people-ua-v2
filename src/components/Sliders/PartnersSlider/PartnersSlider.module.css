@@ -51,7 +51,8 @@
 }
 
 .dot:hover {
-    transform: scale(1.25);
+    /* transform: scale(1.25); */
+    background-color: var(--blue);
     transition: all .3s;
 }
 

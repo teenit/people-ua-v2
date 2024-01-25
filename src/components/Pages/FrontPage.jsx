@@ -73,7 +73,11 @@ import img5 from '../../img/partnersSlider/img5.png'
 import img6 from '../../img/partnersSlider/img6.png'
 import img7 from '../../img/partnersSlider/img7.jpg'
 import img8 from '../../img/partnersSlider/img8.png'
+
+import roadmap from '../../img/roadmap.svg'
+
 import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
+import ValuesListSplit from '../ValuesList/ValuesListSplit'
 const FrontPage = () => {
   const valueListsData = {
     ourValues: {
@@ -84,7 +88,9 @@ const FrontPage = () => {
     weWantToAct: {
       imgUrl: weWantToActImg,
       title: "Ми прагнемо діяти",
-      values: ["Свідомо", "Цілісно", "Професійно", "Якісно", "На перспективу", "Через взаємовідносини", "Постійно комунікуючи", "Технологічно та сучасно"]
+      values: [["Свідомо", "Цілісно", "Професійно", "Якісно", "На перспективу", "Через взаємовідносини", "Постійно комунікуючи", "Технологічно та сучасно"],
+      ["Ресурсний центр", "Case Management", "Підхід ТОВД", "Постійні волонтери", "Наставництво", "Сімейна опіка", "Індивідуальна допомога", "Психологічна підтримка"]],
+      listTitles:["Як?","Через"]
     },
     ourPrinciples: {
       imgUrl: ourPrinciplesImg,
@@ -428,6 +434,46 @@ const FrontPage = () => {
             </div>
 
           }
+          {vision.goals ?
+            <div className={`${s.vision__card} ${s.vision__card__desc}`} onClick={() => {
+              // setVision({ ...vision, vision: vision.vision, mission: vision.mission, goals: !vision.goals })
+            }}>
+              <div className={`${s.vision__card__content} ${s.vision__desc}`}>
+                <p className={s.title__vision}>НАШ ПУТІВНИК відповідно до Світу без сиріт</p>
+                <div className={s.vision__content__split}>
+                <ul>
+                  <li>Широкомасштабна колаборація</li>
+                  <li>Превенція</li>
+                  <li>Інтервенція</li>
+                  <li>Оновлене життя</li>
+                </ul>
+                <div className={s.vision__img__wrap}>
+                <a href="https://www.wwo.org/"><img src={roadmap} alt="" /></a>
+                </div>
+                </div>
+                {/* <div className={s.vision__arrow__wrap}>
+                  <img src={visionArrow} alt="" />
+                </div> */}
+              </div>
+            </div>
+            :
+            <div className={s.vision__card} onClick={() => {
+              setVision({ ...vision, vision: vision.vision, mission: vision.mission, goals: !vision.goals })
+            }}>
+              <div className={s.vision__card__content}>
+                <div className={s.vision__card__info}>
+                  <div className={s.vision__img__wrap}>
+                    <img src={goal} alt="" />
+                  </div>
+                  <p>наші цілі</p>
+                </div>
+                <div className={s.vision__arrow__wrap}>
+                  <img src={visionArrow} alt="" />
+                </div>
+              </div>
+            </div>
+
+          }
         </div>
 
         <ValuesList data={valueListsData.ourValues} />
@@ -475,7 +521,7 @@ const FrontPage = () => {
           </div>
         </div>
 
-        <ValuesList data={valueListsData.weWantToAct} />
+        <ValuesListSplit data={valueListsData.weWantToAct} />
 
 
         <TeamSlider teamSliderData={teamSliderData.team} />

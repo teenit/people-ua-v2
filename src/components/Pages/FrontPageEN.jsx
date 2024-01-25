@@ -74,22 +74,28 @@ import img6 from '../../img/partnersSlider/img6.png'
 import img7 from '../../img/partnersSlider/img7.jpg'
 import img8 from '../../img/partnersSlider/img8.png'
 import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
+
+import roadmap from '../../img/roadmap.svg'
+import ValuesListSplit from '../ValuesList/ValuesListSplit'
+
 const FrontPageEN = () => {
   const valueListsData = {
     ourValues: {
       imgUrl: valuesImg,
       title: "OUR MAIN VALUES",
-      values: ["Freedom", "Dignity", "Justice", "Social responsibility"]
+      values: ["Freedom", "Dignity", "Justice", "Social Responsibility"]
     },
     weWantToAct: {
       imgUrl: weWantToActImg,
       title: "WE AIM TO ACT",
-      values: ["Consciously", "Wholistically", "Professionally", "Effectively", "Through relationships", "Constantly communicating", "Technologically and modernly","Perspectively"]
+      values: [["Consciously", "Holistically", "Professionally", "Effectively", "Through relationships", "Constantly communicating", "Technologically and Modernly","Perspectively"],
+      ["Resource center", "Case management", "TBRI approach", "Regular volunteers", "Mentorship", "Family care", "Individual assistance","Psychological support"]],
+      listTitles:["How","With"]
     },
     ourPrinciples: {
       imgUrl: ourPrinciplesImg,
       title: "OUR PRINCIPLES",
-      values: ["Act with love and care", "Respecting each other's differences", "Out of respect for human dignity", "As equal to equal", "With humor and good atmosphere", "In unity and cooperation"]
+      values: ["Act with love and service", "Respecting diversity", "Valuing human dignity", "As equal to equal", "With humor and good atmosphere", "In unity and cooperation"]
     },
   }
 
@@ -97,7 +103,7 @@ const FrontPageEN = () => {
     {
       imgUrl: directionsImg1,
       title: "Orphan`s Hope UA",
-      description: "We work with orphans who live in residential care, foster families or have graduated from institutions",
+      description: "We work with orphans who live in residential care, foster families or those who have graduated from institutions",
       yak: "regular volunteer visits to children's centers in Kyiv and Kyiv region for building friendship, mentoring, training programs, master classes, robotics courses, Happy Day trips, summer camps and big events",
       task: "support and help an orphan to integrate into society through socialization, career guidance and education, find a mentor and a caring family for further development",
     },
@@ -105,36 +111,36 @@ const FrontPageEN = () => {
       imgUrl: directionsImg2,
       title: "ID Club",
       description: "We work with kids & teens, their parents & families who are at risk because of war",
-      yak:"systematic work with teens and their parents through the variety of courses, such as 7 Habits of Highly Effective Teens course by Stephen Covey, the Q-club course (for teens 11-14 years old), the Preparation for Success course (for teens 15-18 years old), groups of support for parents",
+      yak:" offering a systematic work with teens and their parents through the variety of courses, such as 7 Habits of Highly Effective Teens course by Stephen Covey, the Q-club course (for teens 11-14 years old), the Preparation for Success course (for teens 15-18 years old), groups of support for parents",
       task:"support and help a family to prevent their crisis situation through our assessment of their needs, drawing up a personal plan and providing various social services for them. Also we help kids & teens with understanding themselves, their skills and their development through various courses, clubs and big events"
     },
     {
       imgUrl: directionsImg3,
       title: "IT Club",
       description: "We work with teens & youth who want to learn basic computer skills or even become IT professionals",
-      yak:"comprehensive approach to learning basic computer skills for office work, programming, web design, animation, robotics, VR and AI through our own programs for teens",
-      task:" provide and improve IT skills to our students for their future professionalism and easier employment, as well as integrating the latest technologies into their lives"
+      yak:"achieving comprehensive approach to learn basic computer skills for office work, programming, web design, animation, robotics, VR and AI through our own programs for teens",
+      task:"equip and enhance our students` IT proficiency for their future professionalism and easier employment, while also integrating the latest technologies into their lives"
     },
     {
       imgUrl: directionsImg4,
       title: "IDP Youth Center",
       description: "We work with internally displaced students, teachers and other displaced youth",
-      yak:"sustainable groups of support and humanitarian aid for IDP students and further involvement of youth in civil society through Volunteer School",
-      task:" support internally displaced youth through personal or group meetings, humanitarian aid, educational activities and involvement in volunteering"
+      yak:"helding sustainable groups of support and humanitarian aid for IDP students and involving them in civil society and various activities through Volunteer School",
+      task:"support internally displaced youth through personal or group meetings, humanitarian aid, educational activities and involvement in volunteering"
     },
     {
       imgUrl: directionsImg5,
       title: "Support UA in crisis",
       description: "We provide diagnostics, psychological help and groups of support for families, children and youth",
-      yak:"permanent filing of the Resource Center, “Case Manager” program and use of TBRI - approach, questionnaires, diagnostics, individual and group consultations, psychological assistance, “Groups of Hope” in a crisis situation",
+      yak:"permanent filing of the Resource Center, “Case Manager” program and using of TBRI - approach, questionnaires, diagnostics; providing individual and group consultations, psychological assistance, “Groups of Hope” in a crisis situation",
       task:"help with psychological problems through needs assessment, meetings with a psychologist, supporting groups, building child-parent relationships and art therapy"
     },
     {
       imgUrl: directionsImg6,
       title: "Coalition “Kyiv without orphans”",
       description: "We find, inform, involve, equip and empower partners working together in unity to achieve common goals in Kyiv and region influencing orphans & at-risk kids, youth and families",
-      yak:"different conferences, meetings & round-table discussions, presentations and trainings, preparation of joint documents and statements",
-      task:"help NGOs, universities & colleges, churches, volunteers and resource families with collaborative practice to prevent and overcome orphanhood"
+      yak:"implementing various conferences, meetings & round-table discussions, presentations and trainings, preparation of joint documents and statements",
+      task:"help NGOs, universities & colleges, churches, volunteers and resource families through collaborative efforts aimed at preventing and overcoming "
     },
   ]
   const newsData = [
@@ -316,8 +322,8 @@ const FrontPageEN = () => {
                 <p style={{ fontSize: "24px", fontFamily: "Kyiv Region" }}>NGO PEOPLE UA, KYIV<br />
                 </p>
                 <div>
-                  <p className={s.big__size}>We build the foundation of a new postwar Ukrainian society together with partners </p>
-                  <p className={s.middle__size}>Using a systematic, comprehensive and individual approach to help, support and develop children, parents/families and youth in local communities</p>
+                  <p className={s.big__size}>We build the foundation of a new postwar Ukrainian society together with our partners </p>
+                  <p className={s.middle__size}>Using a systematic, comprehensive and individual approach to help, support and develop children, youth and their families in local communities</p>
                 </div>
               </div>
             </div>
@@ -336,8 +342,7 @@ const FrontPageEN = () => {
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
                   <p className={s.title__vision}>Our Vision</p>
-                  <p>Children grow up in caring families, learn how to develop their personalities through education, socialization & career guidance and participate in Ukrainian society.
-                  Caring families and other people raise children, develop their personalities and involve them in participation in Ukrainian society.
+                  <p>Children grow up in caring families, learn how to develop their personalities through education, socialization & career guidance and proactively participate in Ukrainian society
                   </p>
                   {/* <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
@@ -370,7 +375,7 @@ const FrontPageEN = () => {
               }}>
                 <div className={`${s.vision__card__content} ${s.vision__desc}`}>
                   <p className={s.title__vision}>Our mission</p>
-                  <p>Engaging/involvement volunteers, professionals, mentors, capable families and partners, (churches) to impact children, youth, parents and whole society (to help, support and influence society)
+                  <p>Engaging and equipping  volunteers, professionals, mentors, capable families and partners (including churches) to make a positive impact on children, youth, parents and the entire society
                   </p>
                   {/* <div className={s.vision__arrow__wrap}>
                     <img src={visionArrow} alt="" />
@@ -406,9 +411,9 @@ const FrontPageEN = () => {
               <div className={`${s.vision__card__content} ${s.vision__desc}`}>
                 <p className={s.title__vision}>Our goals</p>
                 <ul>
-                  <li>Help children live in caring families</li>
-                  <li>Provide assistance, support and protection of childrens` rights, families and young people</li>
-                  <li>Encourage them for wholistic development and participation in civil society</li>
+                  <li>Help children live in nurturing families</li>
+                  <li>Provide assistance, support and protection of the rights of children, families and young people</li>
+                  <li>Encourage them for holistic development and participation in civil society</li>
                   <li>Inform them about Ukrainian and family values, spirituality and healthy lifestyle</li>
                 </ul>
 
@@ -427,6 +432,47 @@ const FrontPageEN = () => {
                     <img src={goal} alt="" />
                   </div>
                   <p>Our goals</p>
+                </div>
+                <div className={s.vision__arrow__wrap}>
+                  <img src={visionArrow} alt="" />
+                </div>
+              </div>
+            </div>
+
+          }
+                    {vision.goals ?
+            <div className={`${s.vision__card} ${s.vision__card__desc}`} onClick={() => {
+              // setVision({ ...vision, vision: vision.vision, mission: vision.mission, goals: !vision.goals })
+            }}>
+              <div className={`${s.vision__card__content} ${s.vision__desc}`}>
+                <p className={s.title__vision}>OUR ROADMAP according to World Without Orphans:</p>
+                <div className={s.vision__content__split}>
+                <ul>
+                  <li>Broadscale collaboration</li>
+                  <li>Prevention</li>
+                  <li>Intervention</li>
+                  <li>Living refreshed</li>
+                </ul>
+                <div className={s.vision__img__wrap}>
+                  <a href="https://www.wwo.org/"><img src={roadmap} alt="" /></a>
+                  
+                </div>
+                </div>
+                {/* <div className={s.vision__arrow__wrap}>
+                  <img src={visionArrow} alt="" />
+                </div> */}
+              </div>
+            </div>
+            :
+            <div className={s.vision__card} onClick={() => {
+              setVision({ ...vision, vision: vision.vision, mission: vision.mission, goals: !vision.goals })
+            }}>
+              <div className={s.vision__card__content}>
+                <div className={s.vision__card__info}>
+                  <div className={s.vision__img__wrap}>
+                    <img src={goal} alt="" />
+                  </div>
+                  <p>наші цілі</p>
                 </div>
                 <div className={s.vision__arrow__wrap}>
                   <img src={visionArrow} alt="" />
@@ -482,7 +528,7 @@ const FrontPageEN = () => {
           </div>
         </div>
 
-        <ValuesList data={valueListsData.weWantToAct} />
+        <ValuesListSplit data={valueListsData.weWantToAct} />
 
 
         <TeamSlider teamSliderData={teamSliderData.team} />
