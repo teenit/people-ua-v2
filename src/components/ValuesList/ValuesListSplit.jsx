@@ -16,7 +16,7 @@ const ValuesListSplit = ({ data }) => {
                                 <p style={{fontWeight:"bold"}}>{data.listTitles[index]}</p>
                                 {item.map((p) => {
                                     return (
-                                        <p key={index}>{p}</p>
+                                        <p key={p}>{p}</p>
                                     )
                                 })}
 

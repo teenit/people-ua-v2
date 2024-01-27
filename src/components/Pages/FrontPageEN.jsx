@@ -90,7 +90,7 @@ const FrontPageEN = () => {
       title: "WE AIM TO ACT",
       values: [["Consciously", "Holistically", "Professionally", "Effectively", "Through relationships", "Constantly communicating", "Technologically and Modernly","Perspectively"],
       ["Resource center", "Case management", "TBRI approach", "Regular volunteers", "Mentorship", "Family care", "Individual assistance","Psychological support"]],
-      listTitles:["How","With"]
+      listTitles:["How?","With"]
     },
     ourPrinciples: {
       imgUrl: ourPrinciplesImg,

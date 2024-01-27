@@ -58,6 +58,10 @@
         grid-template-columns: none;
         grid-template-rows: max-content 1fr;
     }
+    .values__list__multi{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
     
 
 }
@@ -69,7 +73,7 @@
 }
 .values__inner:has(.values__multi) {
     grid-template-columns: none;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: max-content 1fr;
 }
 }
 @media screen and (max-width:500px){
