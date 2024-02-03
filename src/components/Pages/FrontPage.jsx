@@ -78,6 +78,7 @@ import roadmap from '../../img/roadmap.svg'
 
 import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
 import ValuesListSplit from '../ValuesList/ValuesListSplit'
+import { Helmet } from 'react-helmet'
 const FrontPage = () => {
   const valueListsData = {
     ourValues: {
@@ -306,6 +307,19 @@ const FrontPage = () => {
   const [ourPicturesState, setOurPicturesState] = useState(ourPicturesData.slice(0,9))
   return (
     <div className={s.wrap}>
+      <Helmet>
+        <title>ЛЮДИ UA</title>
+        <meta
+          name="description"
+          content="Громадська організація «ЛЮДИ ЮЕЙ» м. Київ
+          Закладаємо фундамент нового українського суспільства разом з партнерами.
+          Використовуючи систематичний, комплексний та індивідуальний підхід до допомоги, підтримки і розвитку дітей, сімей та молоді в громадах"
+        />
+        <meta 
+          name='image'
+          content='logo512.png'
+        />
+      </Helmet>
       <div className={s.inner}>
         <div className={s.first__screen__wrap}>
           <div className={s.first__screen__inner}>
@@ -350,7 +364,7 @@ const FrontPage = () => {
                 <div className={s.vision__card__content}>
                   <div className={s.vision__card__info}>
                     <div className={s.vision__img__wrap}>
-                      <img src={visionImg} alt="" />
+                      <img src={visionImg} alt="Бачення" />
                     </div>
 
                     <p>наше бачення</p>
@@ -384,7 +398,7 @@ const FrontPage = () => {
 
                   <div className={s.vision__card__info}>
                     <div className={s.vision__img__wrap}>
-                      <img src={rocket} alt="" />
+                      <img src={rocket} alt="Місія" />
                     </div>
                     <p>наша місія</p>
                   </div>
@@ -423,12 +437,12 @@ const FrontPage = () => {
               <div className={s.vision__card__content}>
                 <div className={s.vision__card__info}>
                   <div className={s.vision__img__wrap}>
-                    <img src={goal} alt="" />
+                    <img src={goal} alt="Цілі" />
                   </div>
                   <p>наші цілі</p>
                 </div>
                 <div className={s.vision__arrow__wrap}>
-                  <img src={visionArrow} alt="" />
+                  <img src={visionArrow} alt="Стрілка" />
                 </div>
               </div>
             </div>
@@ -448,7 +462,7 @@ const FrontPage = () => {
                   <li>Оновлене життя</li>
                 </ul>
                 <div className={s.vision__img__wrap}>
-                <a href="https://www.wwo.org/"><img src={roadmap} alt="" /></a>
+                <a href="https://www.wwo.org/"><img src={roadmap} alt="Дорожня карта WWO" /></a>
                 </div>
                 </div>
                 {/* <div className={s.vision__arrow__wrap}>
@@ -463,12 +477,12 @@ const FrontPage = () => {
               <div className={s.vision__card__content}>
                 <div className={s.vision__card__info}>
                   <div className={s.vision__img__wrap}>
-                    <img src={goal} alt="" />
+                    <img src={goal} alt="Цілі" />
                   </div>
                   <p>наші цілі</p>
                 </div>
                 <div className={s.vision__arrow__wrap}>
-                  <img src={visionArrow} alt="" />
+                  <img src={visionArrow} alt="Стрілка" />
                 </div>
               </div>
             </div>
@@ -509,7 +523,7 @@ const FrontPage = () => {
             <h2 className={s.title}>Про нас</h2>
             <p>{readMore || window.innerWidth >= 1000 ? aboutUsText : aboutUsText.slice(0, 400) + '...'}</p>
             {window.innerWidth < 1000 && (<div className={`${s.about__us__img__wrap} ${readMore && (s.about__us__img__wrap__rotated)}`} style={{ cursor: 'pointer' }}>
-              <img src={aboutUsArrow} alt="" onClick={() => {
+              <img src={aboutUsArrow} alt="Стрілка" onClick={() => {
                 setReadMore(!readMore)
               }} />
             </div>)}

@@ -38,7 +38,7 @@ p,span,h3{
 button{
   cursor: pointer;
   font-family: 'Kyiv Region';
-  font-size: 18px;
+  font-size: 16px;
 }
 .eng *{
   font-family: 'Montserrat'!important;

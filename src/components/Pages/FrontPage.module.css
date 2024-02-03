@@ -186,12 +186,12 @@
 }
 
 .directions__card__wrap {
-    height: max-content;
+    height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
     gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
 }
 
 .directions__card__img {
@@ -210,7 +210,6 @@
     border-radius: var(--card-border-radius);
     border: solid 2px var(--blue);
     padding: 12px;
-    min-height: 200px;
     position: relative;
     display: grid;
     grid-template-rows: max-content 1fr;
@@ -478,9 +477,6 @@
     .first__screen__inner{
         flex-direction: column;
     }
-    .directions__card__wrap{
-        grid-template-rows: 1fr 1fr;
-    }
     .about__us__wrap{
         grid-template-columns: none;
         grid-template-rows: 0.75fr max-content;
@@ -520,14 +516,17 @@
     /* width: 100%; */
     display: flex;
     justify-content: flex-end;
-    position: fixed;
-    background-color: #fff;
+    position: sticky;
+    top: 0px;
 }
 .close_btn {
     width: 20px;
     height: 20px;
     cursor: pointer;
     position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+
 }
 .close_btn span {
     width: 100%;

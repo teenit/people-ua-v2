@@ -77,6 +77,7 @@ import PartnersSlider from '../Sliders/PartnersSlider/PartnersSlider'
 
 import roadmap from '../../img/roadmap.svg'
 import ValuesListSplit from '../ValuesList/ValuesListSplit'
+import { Helmet } from 'react-helmet'
 
 const FrontPageEN = () => {
   const valueListsData = {
@@ -314,6 +315,19 @@ const FrontPageEN = () => {
   const [ourPicturesState, setOurPicturesState] = useState(ourPicturesData.slice(0,9))
   return (
     <div className={`${s.wrap} eng`}>
+      <Helmet>
+        <title>PEOPLE UA</title>
+        <meta
+          name="description"
+          content="NGO PEOPLE UA, KYIV
+          We build the foundation of a new postwar Ukrainian society together with our partners.
+          Using a systematic, comprehensive and individual approach to help, support and develop children, youth and their families in local communities."
+        />
+        <meta 
+          name='image'
+          content='logo250en.png'
+        />
+      </Helmet>
       <div className={s.inner}>
         <div className={s.first__screen__wrap}>
           <div className={s.first__screen__inner}>

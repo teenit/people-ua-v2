@@ -19,7 +19,7 @@ const DirectionsCard = ({ data }) => {
             <button className={s.directions__card__button} onClick={() => {
               setState(!state)
             }}>
-              <img src={buttonArrow} alt="" />
+              <img src={buttonArrow} alt="Arrow" />
             </button>
           </div> : <div className={`${s.directions__card__panel} ${s.active__description}`}>
             <p>
@@ -29,15 +29,16 @@ const DirectionsCard = ({ data }) => {
             <button className={s.directions__card__button} onClick={() => {
               setState(!state)
             }}>
-              <img src={buttonArrow} alt="" />
+              <img src={buttonArrow} alt="Arrow" />
             </button>
           </div>}
-          <button className={s.directions__read__more__button} onClick={() => {
+          {/* <button className={s.directions__read__more__button} onClick={() => {
               setState(!state)
             }}>
               <span>Read more</span>
               <img src={buttonArrow} alt="" />
-            </button>      </div>
+            </button>       */}
+          </div>
     </div>
   );
 };
