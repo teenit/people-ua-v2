@@ -32,9 +32,12 @@ const DirectionsCard = ({ data }) => {
               <img src={buttonArrow} alt="" />
             </button>
           </div>}
-
-      </div>
-      {/* {state?<DirectionCardInfo data={data} close={()=>{setState(false)}}/>:null} */}
+          <button className={s.directions__read__more__button} onClick={() => {
+              setState(!state)
+            }}>
+              <span>Read more</span>
+              <img src={buttonArrow} alt="" />
+            </button>      </div>
     </div>
   );
 };

@@ -13,10 +13,13 @@ const NewsCard = ({ data, lang = "ua" }) => {
         <img src={data.imgUrl} alt={data.title} />
       </div>
       <div className={s.directions__card__info}>
+        <div className={s.news__card__text}>
         <h3>{data.title}</h3>
+        <p>{data.description}</p>
+
+        </div>
         
-          <div className={s.news__card__panel}>
-            <p>{data.description}</p>
+          <div className={s.news__card__button__wrap}>
             <button className={s.news__card__button} onClick={() => {
               setState(!state)
             }}>
@@ -26,7 +29,7 @@ const NewsCard = ({ data, lang = "ua" }) => {
           </div>
 
       </div>
-      {state?<NewsCardInfo data={data} close={()=>{setState(false)}}/>:null}
+      {state?<NewsCardInfo lang={lang} data={data} close={()=>{setState(false)}}/>:null}
     </div>
   );
 };

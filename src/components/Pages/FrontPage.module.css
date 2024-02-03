@@ -209,12 +209,25 @@
 .directions__card__info {
     border-radius: var(--card-border-radius);
     border: solid 2px var(--blue);
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
     padding: 12px;
     min-height: 200px;
     position: relative;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    gap: 10px;
+}
+.directions__read__more__button{
+    color: #fff;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .directions__card__info h3, .directions__card__info p{
     margin: 0;
@@ -295,15 +308,27 @@
     gap: 15px;
     color:#fff;
     padding: 10px;
-    position: absolute;
-    bottom: 15px;
 } 
+.news__card__button__wrap{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
 .news__row{
     height: max-content;
     display: flex;
     gap: 50px;
     align-items: center;
     flex-direction: row;
+}
+.news__card__text{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.news__card__text h3{
+    text-align: center;
 }
 .news__card__panel {
     width: 100%;
@@ -339,7 +364,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 12.5%;
 }
-
+.news__wrap h2{
+    font-family: 'Montserrat';
+}
+.title__eng{
+    font-family: "Montserrat" !important
+}
 
 
 
@@ -486,14 +516,18 @@
     padding: 20px;
     position: relative;
 }
+.close__btn__wrap{
+    /* width: 100%; */
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    background-color: #fff;
+}
 .close_btn {
     width: 20px;
     height: 20px;
-    position: relative;
-    position: absolute;
-    top: 5px;
-    right: 5px;
     cursor: pointer;
+    position: relative;
 }
 .close_btn span {
     width: 100%;
