@@ -11,6 +11,10 @@
   font-family: "Inter";
   src: url('../public/fonts/Inter-Regular.ttf')
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url('../public/fonts/Montserrat-Regular.ttf')
+}
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -37,5 +41,14 @@ button{
   font-size: 18px;
 }
 .eng *{
-  font-family: Montserrat!important;
+  font-family: 'Montserrat'!important;
+}
+::-webkit-scrollbar{
+  width: 6px;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #30358C;
+  border-radius: 10px;
 }

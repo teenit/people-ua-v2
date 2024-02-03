@@ -83,6 +83,12 @@ const DonatForm = ({close}) => {
                                 navigator.clipboard.writeText(e.target.innerText)
                             }}><a className={s.paypal_link} href="https://www.paypal.com/donate/?hosted_button_id=AQUH5TV8FZ3BC">Support us</a></div>
                         </div>
+                            <div className={s.item}>
+                            <div className={s.item_title}>PayPal mail</div>
+                            <div className={s.item_description} onClick={(e)=>{
+                                navigator.clipboard.writeText(e.target.innerText)
+                            }}><p>donate@people-ua.org</p></div>
+                        </div>
                         <div className={s.item}>
                             <div className={s.item_title}>PayPal QR-code</div>
                             <div className={s.item_description} onClick={(e)=>{

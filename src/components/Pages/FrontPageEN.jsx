@@ -556,7 +556,7 @@ const FrontPageEN = () => {
               if (showAllPhotos) {
                 document.getElementById("our__pictures__title").scrollIntoView({ block: 'start', behavior: 'smooth' })
               }
-            }}>{showAllPhotos ? "Close" : "Show"}</button>
+            }}>{showAllPhotos ? "Close" : "More"}</button>
           </div>
         </div>
 
