@@ -1,0 +1,10 @@
+.PicAndText {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    box-sizing: border-box;
+    img {
+        width: 100%;
+    }
+}

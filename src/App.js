@@ -1,10 +1,7 @@
 import './App.css';
-import Header from './components/Header/Header'
-import FrontPage from './components/Pages/FrontPage'
-import Footer from './components/Footer/Footer'
 import AppRoutes from './components/Routes/Routes';
 import { BrowserRouter } from 'react-router-dom';
-
+import './assets/assets.scss';
 function App() {
   return (
     <BrowserRouter>
